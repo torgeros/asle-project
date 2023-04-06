@@ -14,4 +14,13 @@
   - right click top level entry, "generate model"
 - right click on `basicfamily` project (side bar), run as, eclipse application
 
-Eclipse should open with `basicfamily.sample` and `my.family.design`. The first contains the to-be-shown `*.basicfamily`-file and the diagram representation. The latter contains the diagram specification, i.e., the `.odesign`-file that translate metamodel into diagram.
+in runtime:
+- import from `./runtime` both projects `basicfamily.sample` and `my.family.design`
+- unfold the .sample, double click aird
+  - double click 'Persons diagram'
+  - select family, click finish, give it any name
+  - this should give you all the persons in a diagram opening up.
+
+editing and saving the diagram leads to the `.basicfamily`-file in that project being saved.
+
+basically, sirius now acts as an editor for the xmi file `*.basicfamily`.
