@@ -21,19 +21,14 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * <ul>
- * <li>{@link org.eclipse.sirius.sample.basicfamily.Person#getName <em>Name
- * </em>}</li>
- * <li>{@link org.eclipse.sirius.sample.basicfamily.Person#getChildren <em>
- * Children</em>}</li>
- * <li>{@link org.eclipse.sirius.sample.basicfamily.Person#getParents <em>
- * Parents</em>}</li>
- * <li>{@link org.eclipse.sirius.sample.basicfamily.Person#getMother <em>Mother
- * </em>}</li>
- * <li>{@link org.eclipse.sirius.sample.basicfamily.Person#getFather <em>Father
- * </em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link org.eclipse.sirius.sample.basicfamily.Person#getName <em>Name</em>}</li>
+ *   <li>{@link org.eclipse.sirius.sample.basicfamily.Person#getChildren <em>Children</em>}</li>
+ *   <li>{@link org.eclipse.sirius.sample.basicfamily.Person#getParents <em>Parents</em>}</li>
+ *   <li>{@link org.eclipse.sirius.sample.basicfamily.Person#getMother <em>Mother</em>}</li>
+ *   <li>{@link org.eclipse.sirius.sample.basicfamily.Person#getFather <em>Father</em>}</li>
+ * </ul>
  *
  * @see org.eclipse.sirius.sample.basicfamily.BasicfamilyPackage#getPerson()
  * @model abstract="true"
@@ -58,57 +53,48 @@ public interface Person extends EObject {
     String getName();
 
     /**
-     * Sets the value of the '
-     * {@link org.eclipse.sirius.sample.basicfamily.Person#getName
-     * <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param value
-     *            the new value of the '<em>Name</em>' attribute.
-     * @see #getName()
-     * @generated
-     */
+	 * Sets the value of the '{@link org.eclipse.sirius.sample.basicfamily.Person#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
     void setName(String value);
 
     /**
-     * Returns the value of the '<em><b>Children</b></em>' reference list. The
-     * list contents are of type
-     * {@link org.eclipse.sirius.sample.basicfamily.Person}. It is bidirectional
-     * and its opposite is '
-     * {@link org.eclipse.sirius.sample.basicfamily.Person#getParents
-     * <em>Parents</em>}'. <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Children</b></em>' reference list.
+	 * The list contents are of type {@link org.eclipse.sirius.sample.basicfamily.Person}.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.sirius.sample.basicfamily.Person#getParents <em>Parents</em>}'.
+	 * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Children</em>' reference list isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
-     * @return the value of the '<em>Children</em>' reference list.
-     * @see org.eclipse.sirius.sample.basicfamily.BasicfamilyPackage#getPerson_Children()
-     * @see org.eclipse.sirius.sample.basicfamily.Person#getParents
-     * @model opposite="parents"
-     * @generated
-     */
+	 * @return the value of the '<em>Children</em>' reference list.
+	 * @see org.eclipse.sirius.sample.basicfamily.BasicfamilyPackage#getPerson_Children()
+	 * @see org.eclipse.sirius.sample.basicfamily.Person#getParents
+	 * @model opposite="parents"
+	 * @generated
+	 */
     EList<Person> getChildren();
 
     /**
-     * Returns the value of the '<em><b>Parents</b></em>' reference list. The
-     * list contents are of type
-     * {@link org.eclipse.sirius.sample.basicfamily.Person}. It is bidirectional
-     * and its opposite is '
-     * {@link org.eclipse.sirius.sample.basicfamily.Person#getChildren
-     * <em>Children</em>}'. <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Parents</b></em>' reference list.
+	 * The list contents are of type {@link org.eclipse.sirius.sample.basicfamily.Person}.
+	 * It is bidirectional and its opposite is '{@link org.eclipse.sirius.sample.basicfamily.Person#getChildren <em>Children</em>}'.
+	 * <!-- begin-user-doc -->
      * <p>
      * If the meaning of the '<em>Parents</em>' reference list isn't clear,
      * there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
-     * @return the value of the '<em>Parents</em>' reference list.
-     * @see org.eclipse.sirius.sample.basicfamily.BasicfamilyPackage#getPerson_Parents()
-     * @see org.eclipse.sirius.sample.basicfamily.Person#getChildren
-     * @model opposite="children" upper="2"
-     * @generated
-     */
+	 * @return the value of the '<em>Parents</em>' reference list.
+	 * @see org.eclipse.sirius.sample.basicfamily.BasicfamilyPackage#getPerson_Parents()
+	 * @see org.eclipse.sirius.sample.basicfamily.Person#getChildren
+	 * @model opposite="children" upper="2"
+	 * @generated
+	 */
     EList<Person> getParents();
 
     /**

@@ -19,29 +19,25 @@ import org.eclipse.sirius.sample.basicfamily.Woman;
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
  * <em><b>Woman</b></em>'. <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
 public class WomanImpl extends PersonImpl implements Woman {
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
     protected WomanImpl() {
-        super();
-    }
+		super();
+	}
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
     @Override
     protected EClass eStaticClass() {
-        return BasicfamilyPackage.Literals.WOMAN;
-    }
+		return BasicfamilyPackage.Literals.WOMAN;
+	}
 
 } // WomanImpl

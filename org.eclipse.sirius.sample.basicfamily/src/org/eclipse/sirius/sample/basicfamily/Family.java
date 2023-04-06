@@ -21,13 +21,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * <ul>
- * <li>{@link org.eclipse.sirius.sample.basicfamily.Family#getName <em>Name
- * </em>}</li>
- * <li>{@link org.eclipse.sirius.sample.basicfamily.Family#getMembers <em>
- * Members</em>}</li>
- * </ul>
  * </p>
+ * <ul>
+ *   <li>{@link org.eclipse.sirius.sample.basicfamily.Family#getName <em>Name</em>}</li>
+ *   <li>{@link org.eclipse.sirius.sample.basicfamily.Family#getMembers <em>Members</em>}</li>
+ * </ul>
  *
  * @see org.eclipse.sirius.sample.basicfamily.BasicfamilyPackage#getFamily()
  * @model
@@ -52,33 +50,29 @@ public interface Family extends EObject {
     String getName();
 
     /**
-     * Sets the value of the '
-     * {@link org.eclipse.sirius.sample.basicfamily.Family#getName
-     * <em>Name</em>}' attribute. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @param value
-     *            the new value of the '<em>Name</em>' attribute.
-     * @see #getName()
-     * @generated
-     */
+	 * Sets the value of the '{@link org.eclipse.sirius.sample.basicfamily.Family#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
     void setName(String value);
 
     /**
-     * Returns the value of the '<em><b>Members</b></em>' containment reference
-     * list. The list contents are of type
-     * {@link org.eclipse.sirius.sample.basicfamily.Person}. <!-- begin-user-doc
+	 * Returns the value of the '<em><b>Members</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.sirius.sample.basicfamily.Person}.
+	 * <!-- begin-user-doc
      * -->
      * <p>
      * If the meaning of the '<em>Members</em>' containment reference list isn't
      * clear, there really should be more of a description here...
      * </p>
      * <!-- end-user-doc -->
-     * 
-     * @return the value of the '<em>Members</em>' containment reference list.
-     * @see org.eclipse.sirius.sample.basicfamily.BasicfamilyPackage#getFamily_Members()
-     * @model containment="true"
-     * @generated
-     */
+	 * @return the value of the '<em>Members</em>' containment reference list.
+	 * @see org.eclipse.sirius.sample.basicfamily.BasicfamilyPackage#getFamily_Members()
+	 * @model containment="true"
+	 * @generated
+	 */
     EList<Person> getMembers();
 
 } // Family

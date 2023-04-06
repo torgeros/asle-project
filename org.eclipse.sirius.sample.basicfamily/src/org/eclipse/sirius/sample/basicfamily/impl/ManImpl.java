@@ -19,29 +19,25 @@ import org.eclipse.sirius.sample.basicfamily.Man;
 /**
  * <!-- begin-user-doc --> An implementation of the model object '
  * <em><b>Man</b></em>'. <!-- end-user-doc -->
- * <p>
- * </p>
  *
  * @generated
  */
 public class ManImpl extends PersonImpl implements Man {
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
     protected ManImpl() {
-        super();
-    }
+		super();
+	}
 
     /**
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
     @Override
     protected EClass eStaticClass() {
-        return BasicfamilyPackage.Literals.MAN;
-    }
+		return BasicfamilyPackage.Literals.MAN;
+	}
 
 } // ManImpl

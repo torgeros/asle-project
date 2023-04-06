@@ -28,50 +28,47 @@ import org.eclipse.emf.ecore.EReference;
  * <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * 
  * @see org.eclipse.sirius.sample.basicfamily.BasicfamilyFactory
  * @model kind="package"
  * @generated
  */
 public interface BasicfamilyPackage extends EPackage {
     /**
-     * The package name. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
+	 * The package name.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
     String eNAME = "basicfamily"; //$NON-NLS-1$
 
     /**
-     * The package namespace URI. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
+	 * The package namespace URI.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
     String eNS_URI = "http://www.eclipse.org/sirius/sample/basicfamily"; //$NON-NLS-1$
 
     /**
-     * The package namespace name. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     */
+	 * The package namespace name.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 */
     String eNS_PREFIX = "basicfamily"; //$NON-NLS-1$
 
     /**
-     * The singleton instance of the package. <!-- begin-user-doc --> <!--
+	 * The singleton instance of the package.
+	 * <!-- begin-user-doc --> <!--
      * end-user-doc -->
-     * 
-     * @generated
-     */
+	 * @generated
+	 */
     BasicfamilyPackage eINSTANCE = org.eclipse.sirius.sample.basicfamily.impl.BasicfamilyPackageImpl.init();
 
     /**
-     * The meta object id for the '
-     * {@link org.eclipse.sirius.sample.basicfamily.impl.PersonImpl
-     * <em>Person</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @see org.eclipse.sirius.sample.basicfamily.impl.PersonImpl
-     * @see org.eclipse.sirius.sample.basicfamily.impl.BasicfamilyPackageImpl#getPerson()
-     * @generated
-     */
+	 * The meta object id for the '{@link org.eclipse.sirius.sample.basicfamily.impl.PersonImpl <em>Person</em>}' class.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @see org.eclipse.sirius.sample.basicfamily.impl.PersonImpl
+	 * @see org.eclipse.sirius.sample.basicfamily.impl.BasicfamilyPackageImpl#getPerson()
+	 * @generated
+	 */
     int PERSON = 0;
 
     /**
@@ -129,14 +126,12 @@ public interface BasicfamilyPackage extends EPackage {
     int PERSON_FEATURE_COUNT = 5;
 
     /**
-     * The meta object id for the '
-     * {@link org.eclipse.sirius.sample.basicfamily.impl.FamilyImpl
-     * <em>Family</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @see org.eclipse.sirius.sample.basicfamily.impl.FamilyImpl
-     * @see org.eclipse.sirius.sample.basicfamily.impl.BasicfamilyPackageImpl#getFamily()
-     * @generated
-     */
+	 * The meta object id for the '{@link org.eclipse.sirius.sample.basicfamily.impl.FamilyImpl <em>Family</em>}' class.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @see org.eclipse.sirius.sample.basicfamily.impl.FamilyImpl
+	 * @see org.eclipse.sirius.sample.basicfamily.impl.BasicfamilyPackageImpl#getFamily()
+	 * @generated
+	 */
     int FAMILY = 1;
 
     /**
@@ -149,12 +144,11 @@ public interface BasicfamilyPackage extends EPackage {
     int FAMILY__NAME = 0;
 
     /**
-     * The feature id for the '<em><b>Members</b></em>' containment reference
-     * list. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @generated
-     * @ordered
-     */
+	 * The feature id for the '<em><b>Members</b></em>' containment reference list.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
     int FAMILY__MEMBERS = 1;
 
     /**
@@ -167,14 +161,12 @@ public interface BasicfamilyPackage extends EPackage {
     int FAMILY_FEATURE_COUNT = 2;
 
     /**
-     * The meta object id for the '
-     * {@link org.eclipse.sirius.sample.basicfamily.impl.ManImpl <em>Man</em>}'
-     * class. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @see org.eclipse.sirius.sample.basicfamily.impl.ManImpl
-     * @see org.eclipse.sirius.sample.basicfamily.impl.BasicfamilyPackageImpl#getMan()
-     * @generated
-     */
+	 * The meta object id for the '{@link org.eclipse.sirius.sample.basicfamily.impl.ManImpl <em>Man</em>}' class.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @see org.eclipse.sirius.sample.basicfamily.impl.ManImpl
+	 * @see org.eclipse.sirius.sample.basicfamily.impl.BasicfamilyPackageImpl#getMan()
+	 * @generated
+	 */
     int MAN = 2;
 
     /**
@@ -232,14 +224,12 @@ public interface BasicfamilyPackage extends EPackage {
     int MAN_FEATURE_COUNT = PERSON_FEATURE_COUNT + 0;
 
     /**
-     * The meta object id for the '
-     * {@link org.eclipse.sirius.sample.basicfamily.impl.WomanImpl
-     * <em>Woman</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @see org.eclipse.sirius.sample.basicfamily.impl.WomanImpl
-     * @see org.eclipse.sirius.sample.basicfamily.impl.BasicfamilyPackageImpl#getWoman()
-     * @generated
-     */
+	 * The meta object id for the '{@link org.eclipse.sirius.sample.basicfamily.impl.WomanImpl <em>Woman</em>}' class.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @see org.eclipse.sirius.sample.basicfamily.impl.WomanImpl
+	 * @see org.eclipse.sirius.sample.basicfamily.impl.BasicfamilyPackageImpl#getWoman()
+	 * @generated
+	 */
     int WOMAN = 3;
 
     /**
@@ -297,110 +287,91 @@ public interface BasicfamilyPackage extends EPackage {
     int WOMAN_FEATURE_COUNT = PERSON_FEATURE_COUNT + 0;
 
     /**
-     * Returns the meta object for class '
-     * {@link org.eclipse.sirius.sample.basicfamily.Person <em>Person</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the meta object for class '<em>Person</em>'.
-     * @see org.eclipse.sirius.sample.basicfamily.Person
-     * @generated
-     */
+	 * Returns the meta object for class '{@link org.eclipse.sirius.sample.basicfamily.Person <em>Person</em>}'.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Person</em>'.
+	 * @see org.eclipse.sirius.sample.basicfamily.Person
+	 * @generated
+	 */
     EClass getPerson();
 
     /**
-     * Returns the meta object for the attribute '
-     * {@link org.eclipse.sirius.sample.basicfamily.Person#getName
-     * <em>Name</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the meta object for the attribute '<em>Name</em>'.
-     * @see org.eclipse.sirius.sample.basicfamily.Person#getName()
-     * @see #getPerson()
-     * @generated
-     */
+	 * Returns the meta object for the attribute '{@link org.eclipse.sirius.sample.basicfamily.Person#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.eclipse.sirius.sample.basicfamily.Person#getName()
+	 * @see #getPerson()
+	 * @generated
+	 */
     EAttribute getPerson_Name();
 
     /**
-     * Returns the meta object for the reference list '
-     * {@link org.eclipse.sirius.sample.basicfamily.Person#getChildren
-     * <em>Children</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the meta object for the reference list '<em>Children</em>'.
-     * @see org.eclipse.sirius.sample.basicfamily.Person#getChildren()
-     * @see #getPerson()
-     * @generated
-     */
+	 * Returns the meta object for the reference list '{@link org.eclipse.sirius.sample.basicfamily.Person#getChildren <em>Children</em>}'.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Children</em>'.
+	 * @see org.eclipse.sirius.sample.basicfamily.Person#getChildren()
+	 * @see #getPerson()
+	 * @generated
+	 */
     EReference getPerson_Children();
 
     /**
-     * Returns the meta object for the reference list '
-     * {@link org.eclipse.sirius.sample.basicfamily.Person#getParents
-     * <em>Parents</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the meta object for the reference list '<em>Parents</em>'.
-     * @see org.eclipse.sirius.sample.basicfamily.Person#getParents()
-     * @see #getPerson()
-     * @generated
-     */
+	 * Returns the meta object for the reference list '{@link org.eclipse.sirius.sample.basicfamily.Person#getParents <em>Parents</em>}'.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Parents</em>'.
+	 * @see org.eclipse.sirius.sample.basicfamily.Person#getParents()
+	 * @see #getPerson()
+	 * @generated
+	 */
     EReference getPerson_Parents();
 
     /**
-     * Returns the meta object for the reference '
-     * {@link org.eclipse.sirius.sample.basicfamily.Person#getMother
-     * <em>Mother</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the meta object for the reference '<em>Mother</em>'.
-     * @see org.eclipse.sirius.sample.basicfamily.Person#getMother()
-     * @see #getPerson()
-     * @generated
-     */
+	 * Returns the meta object for the reference '{@link org.eclipse.sirius.sample.basicfamily.Person#getMother <em>Mother</em>}'.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Mother</em>'.
+	 * @see org.eclipse.sirius.sample.basicfamily.Person#getMother()
+	 * @see #getPerson()
+	 * @generated
+	 */
     EReference getPerson_Mother();
 
     /**
-     * Returns the meta object for the reference '
-     * {@link org.eclipse.sirius.sample.basicfamily.Person#getFather
-     * <em>Father</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the meta object for the reference '<em>Father</em>'.
-     * @see org.eclipse.sirius.sample.basicfamily.Person#getFather()
-     * @see #getPerson()
-     * @generated
-     */
+	 * Returns the meta object for the reference '{@link org.eclipse.sirius.sample.basicfamily.Person#getFather <em>Father</em>}'.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Father</em>'.
+	 * @see org.eclipse.sirius.sample.basicfamily.Person#getFather()
+	 * @see #getPerson()
+	 * @generated
+	 */
     EReference getPerson_Father();
 
     /**
-     * Returns the meta object for class '
-     * {@link org.eclipse.sirius.sample.basicfamily.Family <em>Family</em>}'.
-     * <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the meta object for class '<em>Family</em>'.
-     * @see org.eclipse.sirius.sample.basicfamily.Family
-     * @generated
-     */
+	 * Returns the meta object for class '{@link org.eclipse.sirius.sample.basicfamily.Family <em>Family</em>}'.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Family</em>'.
+	 * @see org.eclipse.sirius.sample.basicfamily.Family
+	 * @generated
+	 */
     EClass getFamily();
 
     /**
-     * Returns the meta object for the attribute '
-     * {@link org.eclipse.sirius.sample.basicfamily.Family#getName
-     * <em>Name</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the meta object for the attribute '<em>Name</em>'.
-     * @see org.eclipse.sirius.sample.basicfamily.Family#getName()
-     * @see #getFamily()
-     * @generated
-     */
+	 * Returns the meta object for the attribute '{@link org.eclipse.sirius.sample.basicfamily.Family#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.eclipse.sirius.sample.basicfamily.Family#getName()
+	 * @see #getFamily()
+	 * @generated
+	 */
     EAttribute getFamily_Name();
 
     /**
-     * Returns the meta object for the containment reference list '
-     * {@link org.eclipse.sirius.sample.basicfamily.Family#getMembers
-     * <em>Members</em>}'. <!-- begin-user-doc --> <!-- end-user-doc -->
-     * 
-     * @return the meta object for the containment reference list '
-     *         <em>Members</em>'.
-     * @see org.eclipse.sirius.sample.basicfamily.Family#getMembers()
-     * @see #getFamily()
-     * @generated
-     */
+	 * Returns the meta object for the containment reference list '{@link org.eclipse.sirius.sample.basicfamily.Family#getMembers <em>Members</em>}'.
+	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Members</em>'.
+	 * @see org.eclipse.sirius.sample.basicfamily.Family#getMembers()
+	 * @see #getFamily()
+	 * @generated
+	 */
     EReference getFamily_Members();
 
     /**
@@ -435,7 +406,7 @@ public interface BasicfamilyPackage extends EPackage {
     BasicfamilyFactory getBasicfamilyFactory();
 
     /**
-     * <!-- begin-user-doc --> Defines literals for the meta objects that
+	 * <!-- begin-user-doc --> Defines literals for the meta objects that
      * represent
      * <ul>
      * <li>each class,</li>
@@ -445,9 +416,8 @@ public interface BasicfamilyPackage extends EPackage {
      * <li>and each data type</li>
      * </ul>
      * <!-- end-user-doc -->
-     * 
-     * @generated
-     */
+	 * @generated
+	 */
     interface Literals {
         /**
          * The meta object literal for the '
@@ -462,43 +432,38 @@ public interface BasicfamilyPackage extends EPackage {
         EClass PERSON = eINSTANCE.getPerson();
 
         /**
-         * The meta object literal for the '<em><b>Name</b></em>' attribute
-         * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
-         * @generated
-         */
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc --> <!-- end-user-doc -->
+		 * @generated
+		 */
         EAttribute PERSON__NAME = eINSTANCE.getPerson_Name();
 
         /**
-         * The meta object literal for the '<em><b>Children</b></em>' reference
-         * list feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
-         * @generated
-         */
+		 * The meta object literal for the '<em><b>Children</b></em>' reference list feature.
+		 * <!-- begin-user-doc --> <!-- end-user-doc -->
+		 * @generated
+		 */
         EReference PERSON__CHILDREN = eINSTANCE.getPerson_Children();
 
         /**
-         * The meta object literal for the '<em><b>Parents</b></em>' reference
-         * list feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
-         * @generated
-         */
+		 * The meta object literal for the '<em><b>Parents</b></em>' reference list feature.
+		 * <!-- begin-user-doc --> <!-- end-user-doc -->
+		 * @generated
+		 */
         EReference PERSON__PARENTS = eINSTANCE.getPerson_Parents();
 
         /**
-         * The meta object literal for the '<em><b>Mother</b></em>' reference
-         * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
-         * @generated
-         */
+		 * The meta object literal for the '<em><b>Mother</b></em>' reference feature.
+		 * <!-- begin-user-doc --> <!-- end-user-doc -->
+		 * @generated
+		 */
         EReference PERSON__MOTHER = eINSTANCE.getPerson_Mother();
 
         /**
-         * The meta object literal for the '<em><b>Father</b></em>' reference
-         * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
-         * @generated
-         */
+		 * The meta object literal for the '<em><b>Father</b></em>' reference feature.
+		 * <!-- begin-user-doc --> <!-- end-user-doc -->
+		 * @generated
+		 */
         EReference PERSON__FATHER = eINSTANCE.getPerson_Father();
 
         /**
@@ -514,41 +479,35 @@ public interface BasicfamilyPackage extends EPackage {
         EClass FAMILY = eINSTANCE.getFamily();
 
         /**
-         * The meta object literal for the '<em><b>Name</b></em>' attribute
-         * feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
-         * @generated
-         */
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc --> <!-- end-user-doc -->
+		 * @generated
+		 */
         EAttribute FAMILY__NAME = eINSTANCE.getFamily_Name();
 
         /**
-         * The meta object literal for the '<em><b>Members</b></em>' containment
-         * reference list feature. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
-         * @generated
-         */
+		 * The meta object literal for the '<em><b>Members</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc --> <!-- end-user-doc -->
+		 * @generated
+		 */
         EReference FAMILY__MEMBERS = eINSTANCE.getFamily_Members();
 
         /**
-         * The meta object literal for the '
-         * {@link org.eclipse.sirius.sample.basicfamily.impl.ManImpl
-         * <em>Man</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
-         * @see org.eclipse.sirius.sample.basicfamily.impl.ManImpl
-         * @see org.eclipse.sirius.sample.basicfamily.impl.BasicfamilyPackageImpl#getMan()
-         * @generated
-         */
+		 * The meta object literal for the '{@link org.eclipse.sirius.sample.basicfamily.impl.ManImpl <em>Man</em>}' class.
+		 * <!-- begin-user-doc --> <!-- end-user-doc -->
+		 * @see org.eclipse.sirius.sample.basicfamily.impl.ManImpl
+		 * @see org.eclipse.sirius.sample.basicfamily.impl.BasicfamilyPackageImpl#getMan()
+		 * @generated
+		 */
         EClass MAN = eINSTANCE.getMan();
 
         /**
-         * The meta object literal for the '
-         * {@link org.eclipse.sirius.sample.basicfamily.impl.WomanImpl
-         * <em>Woman</em>}' class. <!-- begin-user-doc --> <!-- end-user-doc -->
-         * 
-         * @see org.eclipse.sirius.sample.basicfamily.impl.WomanImpl
-         * @see org.eclipse.sirius.sample.basicfamily.impl.BasicfamilyPackageImpl#getWoman()
-         * @generated
-         */
+		 * The meta object literal for the '{@link org.eclipse.sirius.sample.basicfamily.impl.WomanImpl <em>Woman</em>}' class.
+		 * <!-- begin-user-doc --> <!-- end-user-doc -->
+		 * @see org.eclipse.sirius.sample.basicfamily.impl.WomanImpl
+		 * @see org.eclipse.sirius.sample.basicfamily.impl.BasicfamilyPackageImpl#getWoman()
+		 * @generated
+		 */
         EClass WOMAN = eINSTANCE.getWoman();
 
     }
