@@ -4,3 +4,8 @@
 
 - <https://wiki.eclipse.org/Sirius/Tutorials/DomainModelTutorial>
 - <https://wiki.eclipse.org/Sirius/Tutorials/StarterTutorial>
+
+## Steps for current setup
+
+- clone repo
+- TODO
