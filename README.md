@@ -12,7 +12,10 @@
 - import `basicfamily`, `.edit` and `.editor`
 - open `basicfamily/model/*.genmodel`
   - right click top level entry, "generate model"
-- right click on `basicfamily` project (side bar), run as, eclipse application
+- right click on `basicfamily` project (side bar), run as, RUN CONFIGURATIONS
+  - set `Location` to `${workspace_loc}/runtime`
+  - click Run
+  - next time this should stay configured
 
 in runtime:
 - import from `./runtime` both projects `basicfamily.sample` and `my.family.design`
