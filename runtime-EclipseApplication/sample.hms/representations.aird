@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:hms="http://mcgill.ca/ecse539/homeautomation/hms" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_tAvp8NZUEe2m7sm7ueC_7w" selectedViews="_iPB3ANZYEe2LpKqGB_tuOw" version="15.1.0.202211301600">
+    <semanticResources>example.home.hms</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_iPB3ANZYEe2LpKqGB_tuOw">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/HomeViewpointSpecification/description/HomeViewpointSpecification.odesign#//@ownedViewpoints[name='MyViewpoint']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_kUaPINZYEe2LpKqGB_tuOw" name="sample HMS Diagram" repPath="#_kURFMNZYEe2LpKqGB_tuOw" changeId="1680991364314">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/HomeViewpointSpecification/description/HomeViewpointSpecification.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='HMS%20Diagram']"/>
+        <target xmi:type="hms:HMS" href="example.home.hms#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram uid="_kURFMNZYEe2LpKqGB_tuOw">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_kUmcYNZYEe2LpKqGB_tuOw" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_kUmcYdZYEe2LpKqGB_tuOw" type="Sirius" element="_kURFMNZYEe2LpKqGB_tuOw" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_n8wO0NZYEe2LpKqGB_tuOw" type="2001" element="_n8l2wNZYEe2LpKqGB_tuOw">
+          <children xmi:type="notation:Node" xmi:id="_n8xc8NZYEe2LpKqGB_tuOw" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_n8xc8dZYEe2LpKqGB_tuOw" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_n8yEANZYEe2LpKqGB_tuOw" type="3003" element="_n8o6ENZYEe2LpKqGB_tuOw">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_n8yEAdZYEe2LpKqGB_tuOw" fontName="Noto Sans"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_n8yEAtZYEe2LpKqGB_tuOw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_n8wO0dZYEe2LpKqGB_tuOw" fontName="Noto Sans" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_n8wO0tZYEe2LpKqGB_tuOw" width="200" height="100"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_kUmcYtZYEe2LpKqGB_tuOw"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_kUrU4NZYEe2LpKqGB_tuOw" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_kUrU4dZYEe2LpKqGB_tuOw"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_n8l2wNZYEe2LpKqGB_tuOw" name="House @ 1000 main st" width="20" height="10" resizeKind="NSEW">
+      <target xmi:type="hms:House" href="example.home.hms#//@house"/>
+      <semanticElements xmi:type="hms:House" href="example.home.hms#//@house"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_n8o6ENZYEe2LpKqGB_tuOw" labelSize="12" labelPosition="node" width="20" height="10" color="246,139,139">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/HomeViewpointSpecification/description/HomeViewpointSpecification.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='HMS%20Diagram']/@defaultLayer/@nodeMappings[name='HouseNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/HomeViewpointSpecification/description/HomeViewpointSpecification.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='HMS%20Diagram']/@defaultLayer/@nodeMappings[name='HouseNode']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/HomeViewpointSpecification/description/HomeViewpointSpecification.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='HMS%20Diagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_kUV9sNZYEe2LpKqGB_tuOw"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/HomeViewpointSpecification/description/HomeViewpointSpecification.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='HMS%20Diagram']/@defaultLayer"/>
+    <target xmi:type="hms:HMS" href="example.home.hms#/"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>

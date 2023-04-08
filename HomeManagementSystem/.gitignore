@@ -1,4 +1,6 @@
 src-gen
+HMS.edit/
+HMS.editor/
 
 .metadata
 bin/
