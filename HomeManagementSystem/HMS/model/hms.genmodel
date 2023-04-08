@@ -14,7 +14,7 @@
     </genClasses>
     <genClasses ecoreClass="hms.ecore#//Room">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hms.ecore#//Room/lightbulbs"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hms.ecore#//Room/fenistrations"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference hms.ecore#//Room/fenistration"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hms.ecore#//Room/targetTemp"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hms.ecore#//Room/currentTemp"/>
     </genClasses>
@@ -24,18 +24,16 @@
     </genClasses>
     <genClasses ecoreClass="hms.ecore#//Switch">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hms.ecore#//Switch/on"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hms.ecore#//Switch/bulb"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hms.ecore#//Switch/fenistration"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="hms.ecore#//Fenistration">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hms.ecore#//Fenistration/room"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hms.ecore#//Fenistration/openSwitch"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hms.ecore#//Fenistration/open"/>
+    <genClasses image="false" ecoreClass="hms.ecore#//Fenestration">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hms.ecore#//Fenestration/room"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hms.ecore#//Fenestration/openSwitch"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hms.ecore#//Fenestration/open"/>
     </genClasses>
     <genClasses ecoreClass="hms.ecore#//Door">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hms.ecore#//Door/lockSwitch"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hms.ecore#//Door/locked"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hms.ecore#//Door/otherRoom"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference hms.ecore#//Door/otherRoom"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hms.ecore#//Door/toOutside"/>
     </genClasses>
     <genClasses ecoreClass="hms.ecore#//Window"/>
