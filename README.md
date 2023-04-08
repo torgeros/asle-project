@@ -8,7 +8,12 @@
 ## Steps for current setup
 
 - open workspace `./HomeManagementSystem`.
-- build **model**, **edit**, and **editor** from `HMS/genmodel`
+- import `HMS` project
+- generate **model**, **edit**, and **editor** from `HMS/model/hms.genmodel`
 - right click `HMS` -> run as, eclipse application
 
-- opens in directory `./runtime-eclipseApplication`
+- new eclipse opens in directory `./runtime-eclipseApplication`
+- import `HomeViewpointSpecification` and `sample.hms` projects
+- to check functionality, open `sample.hms/representations.aird/.../sample HMS Diagram`
+
+A diagram with at least one node representing the house should be displayed.
