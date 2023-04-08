@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated hms -->
       <package
-            uri="http://mcgill.ca/ecse539/homeautomation/hms"
+            uri="ca.mcgill.ecse539.homeautomation.hms"
             class="hms.HmsPackage"
             genModel="model/hms.genmodel"/>
    </extension>

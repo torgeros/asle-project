@@ -1,46 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="hms" nsURI="http://mcgill.ca/ecse539/homeautomation/hms" nsPrefix="hms">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="hms" nsURI="ca.mcgill.ecse539.homeautomation.hms" nsPrefix="hms">
   <eClassifiers xsi:type="ecore:EClass" name="HMS">
     <eStructuralFeatures xsi:type="ecore:EReference" name="house" lowerBound="1" eType="#//House"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="House">
+  <eClassifiers xsi:type="ecore:EClass" name="House" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="rooms" lowerBound="1" upperBound="-1"
         eType="#//Room" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Room">
+  <eClassifiers xsi:type="ecore:EClass" name="Room" eSuperTypes="#//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="lightbulbs" upperBound="-1"
         eType="#//Lightbulb" containment="true" eOpposite="#//Lightbulb/room"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fenistration" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fenestration" lowerBound="1"
         upperBound="-1" eType="#//Fenestration" containment="true" eOpposite="#//Fenestration/room"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="targetTemp" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentTemp" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Lightbulb">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="switch" lowerBound="1"
-        eType="#//Switch"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Lightbulb" eSuperTypes="#//Switchable">
     <eStructuralFeatures xsi:type="ecore:EReference" name="room" lowerBound="1" eType="#//Room"
         eOpposite="#//Room/lightbulbs"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Switch">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="on" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//Switchable"
+        eOpposite="#//Switchable/switch"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Fenestration" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="Fenestration" abstract="true" eSuperTypes="#//Switchable #//NamedElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="room" lowerBound="1" eType="#//Room"
-        eOpposite="#//Room/fenistration"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="openSwitch" lowerBound="1"
-        eType="#//Switch"/>
+        eOpposite="#//Room/fenestration"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="open" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Door" eSuperTypes="#//Fenestration">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="lockSwitch" lowerBound="1"
-        eType="#//Switch"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="locked" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="otherRoom" eType="#//Room"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="toOutside" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lock" eType="#//Lock" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Window" eSuperTypes="#//Fenestration"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Switchable" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="switch" eType="#//Switch"
+        containment="true" eOpposite="#//Switch/target"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Lock" eSuperTypes="#//Switchable">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="locked" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
 </ecore:EPackage>
