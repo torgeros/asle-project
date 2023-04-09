@@ -18,6 +18,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hms.ecore#//Room/targetTemp"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hms.ecore#//Room/currentTemp"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hms.ecore#//Room/switches"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference hms.ecore#//Room/house"/>
     </genClasses>
     <genClasses ecoreClass="hms.ecore#//Lightbulb">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference hms.ecore#//Lightbulb/room"/>
@@ -42,6 +43,7 @@
     </genClasses>
     <genClasses ecoreClass="hms.ecore#//Lock">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hms.ecore#//Lock/locked"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference hms.ecore#//Lock/holder"/>
     </genClasses>
     <genClasses image="false" ecoreClass="hms.ecore#//NamedElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hms.ecore#//NamedElement/name"/>
