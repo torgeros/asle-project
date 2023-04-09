@@ -1,0 +1,3 @@
+module hms2urn;
+create OUT : URN from IN : HMS;
+
