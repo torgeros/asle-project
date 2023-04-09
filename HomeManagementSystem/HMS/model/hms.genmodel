@@ -43,6 +43,7 @@
     </genClasses>
     <genClasses ecoreClass="hms.ecore#//Lock">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hms.ecore#//Lock/locked"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference hms.ecore#//Lock/holder"/>
     </genClasses>
     <genClasses image="false" ecoreClass="hms.ecore#//NamedElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hms.ecore#//NamedElement/name"/>

@@ -43,7 +43,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="otherRoom" eType="#//Room"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="toOutside" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="lock" eType="#//Lock" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lock" eType="#//Lock" containment="true"
+        eOpposite="#//Lock/holder"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Window" eSuperTypes="#//Fenestration"/>
   <eClassifiers xsi:type="ecore:EClass" name="Switchable" abstract="true" interface="true">
@@ -53,6 +54,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="Lock" eSuperTypes="#//Switchable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="locked" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="holder" lowerBound="1"
+        eType="#//Door" eOpposite="#//Door/lock"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NamedElement" abstract="true" interface="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

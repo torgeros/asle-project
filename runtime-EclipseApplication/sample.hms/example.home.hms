@@ -3,11 +3,16 @@
   <house name="1000 main st">
     <rooms name="hallway">
       <lightbulbs switch="//@house/@rooms.0/@switches.0" name="Ceiling Light"/>
-      <fenestration xsi:type="hms:Door" name="main door">
+      <fenestration xsi:type="hms:Door" name="main door" toOutside="true">
         <lock switch="//@house/@rooms.0/@switches.1"/>
       </fenestration>
       <switches name="Main Light Switch" target="//@house/@rooms.0/@lightbulbs.0"/>
       <switches name="door (un-)locker" target="//@house/@rooms.0/@fenestration.0/@lock"/>
+    </rooms>
+    <rooms name="bedroom">
+      <fenestration xsi:type="hms:Window" name="left"/>
+      <fenestration xsi:type="hms:Window" name="right"/>
+      <fenestration xsi:type="hms:Door" name="Bedroom Door" otherRoom="//@house/@rooms.0"/>
     </rooms>
   </house>
 </hms:HMS>
