@@ -4,7 +4,7 @@
     <semanticResources>example.home.hms</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_iPB3ANZYEe2LpKqGB_tuOw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/HomeViewpointSpecification/description/HomeViewpointSpecification.odesign#//@ownedViewpoints[name='MyViewpoint']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_kUaPINZYEe2LpKqGB_tuOw" name="sample HMS Diagram" repPath="#_kURFMNZYEe2LpKqGB_tuOw" changeId="1681081130348">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_kUaPINZYEe2LpKqGB_tuOw" name="sample HMS Diagram" repPath="#_kURFMNZYEe2LpKqGB_tuOw" changeId="1681084557827">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/HomeViewpointSpecification/description/HomeViewpointSpecification.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='HMS%20Diagram']"/>
         <target xmi:type="hms:HMS" href="example.home.hms#/"/>
       </ownedRepresentationDescriptors>
@@ -19,6 +19,39 @@
             <children xmi:type="notation:Node" xmi:id="_tuYVgNckEe2IKOwMig_amw" type="3008" element="_ttN34NckEe2IKOwMig_amw">
               <children xmi:type="notation:Node" xmi:id="_tuYVg9ckEe2IKOwMig_amw" type="5005"/>
               <children xmi:type="notation:Node" xmi:id="_tuY8kNckEe2IKOwMig_amw" type="7002">
+                <children xmi:type="notation:Node" xmi:id="_Cv60oNcwEe21GMTvNB1bMg" type="3007" element="_Cv2jMtcwEe21GMTvNB1bMg">
+                  <children xmi:type="notation:Node" xmi:id="_Cv9Q4NcwEe21GMTvNB1bMg" type="5003">
+                    <layoutConstraint xmi:type="notation:Location" xmi:id="_Cv9Q4dcwEe21GMTvNB1bMg" y="5"/>
+                  </children>
+                  <children xmi:type="notation:Node" xmi:id="_Cv938NcwEe21GMTvNB1bMg" type="3002" element="_Cv3KQNcwEe21GMTvNB1bMg">
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="_Cv938dcwEe21GMTvNB1bMg" fontName="Noto Sans"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Cv938tcwEe21GMTvNB1bMg"/>
+                  </children>
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_Cv60odcwEe21GMTvNB1bMg" fontName="Noto Sans" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Cv60otcwEe21GMTvNB1bMg" x="7" y="92" width="50" height="50"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_Pj3BMNcwEe21GMTvNB1bMg" type="3007" element="_Pi7NENcwEe21GMTvNB1bMg">
+                  <children xmi:type="notation:Node" xmi:id="_Pj3oQNcwEe21GMTvNB1bMg" type="5003">
+                    <layoutConstraint xmi:type="notation:Location" xmi:id="_Pj3oQdcwEe21GMTvNB1bMg" y="5"/>
+                  </children>
+                  <children xmi:type="notation:Node" xmi:id="_RufswNcwEe21GMTvNB1bMg" type="3003" element="_RtF-kdcwEe21GMTvNB1bMg">
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="_RufswdcwEe21GMTvNB1bMg" fontName="Noto Sans"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RufswtcwEe21GMTvNB1bMg"/>
+                  </children>
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_Pj3BMdcwEe21GMTvNB1bMg" fontName="Noto Sans"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Pj3BMtcwEe21GMTvNB1bMg" x="19" y="162" width="100" height="30"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_Pj4PUNcwEe21GMTvNB1bMg" type="3007" element="_Pi70INcwEe21GMTvNB1bMg">
+                  <children xmi:type="notation:Node" xmi:id="_Pj4PU9cwEe21GMTvNB1bMg" type="5003">
+                    <layoutConstraint xmi:type="notation:Location" xmi:id="_Pj4PVNcwEe21GMTvNB1bMg" y="5"/>
+                  </children>
+                  <children xmi:type="notation:Node" xmi:id="_RugT0NcwEe21GMTvNB1bMg" type="3003" element="_RtF-k9cwEe21GMTvNB1bMg">
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="_RugT0dcwEe21GMTvNB1bMg" fontName="Noto Sans"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RugT0tcwEe21GMTvNB1bMg"/>
+                  </children>
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_Pj4PUdcwEe21GMTvNB1bMg" fontName="Noto Sans"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Pj4PUtcwEe21GMTvNB1bMg" x="43" y="28" width="100" height="30"/>
+                </children>
                 <styles xmi:type="notation:SortingStyle" xmi:id="_tuY8kdckEe2IKOwMig_amw"/>
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_tuY8ktckEe2IKOwMig_amw"/>
               </children>
@@ -31,10 +64,10 @@
                   <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oWZuwtclEe2IKOwMig_amw"/>
                 </children>
                 <styles xmi:type="notation:ShapeStyle" xmi:id="_i57fAdclEe2IKOwMig_amw" fontName="Noto Sans" fontHeight="12"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_i57fAtclEe2IKOwMig_amw" x="24" y="-42" width="50" height="50"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_i57fAtclEe2IKOwMig_amw" x="-42" y="24" width="50" height="50"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_tuYVgdckEe2IKOwMig_amw" fontName="Noto Sans"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tuYVgtckEe2IKOwMig_amw" x="55" y="54" width="85" height="241"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tuYVgtckEe2IKOwMig_amw" x="55" y="54" width="157" height="241"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_tuY8k9ckEe2IKOwMig_amw" type="3008" element="_ttN34dckEe2IKOwMig_amw">
               <children xmi:type="notation:Node" xmi:id="_tuY8ltckEe2IKOwMig_amw" type="5005"/>
@@ -61,6 +94,17 @@
                   <styles xmi:type="notation:ShapeStyle" xmi:id="_BbO6odclEe2IKOwMig_amw" fontName="Noto Sans" fontHeight="12"/>
                   <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BbO6otclEe2IKOwMig_amw" x="187" y="6" width="60" height="60"/>
                 </children>
+                <children xmi:type="notation:Node" xmi:id="_JA3Y0NcxEe21GMTvNB1bMg" type="3007" element="_JA1jpNcxEe21GMTvNB1bMg">
+                  <children xmi:type="notation:Node" xmi:id="_JA3Y09cxEe21GMTvNB1bMg" type="5003">
+                    <layoutConstraint xmi:type="notation:Location" xmi:id="_JA3Y1NcxEe21GMTvNB1bMg" y="5"/>
+                  </children>
+                  <children xmi:type="notation:Node" xmi:id="_JA3Y1dcxEe21GMTvNB1bMg" type="3003" element="_JA1jpdcxEe21GMTvNB1bMg">
+                    <styles xmi:type="notation:ShapeStyle" xmi:id="_JA3Y1tcxEe21GMTvNB1bMg" fontName="Noto Sans"/>
+                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JA3Y19cxEe21GMTvNB1bMg"/>
+                  </children>
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_JA3Y0dcxEe21GMTvNB1bMg" fontName="Noto Sans" fontHeight="6"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JA3Y0tcxEe21GMTvNB1bMg" x="31" y="90" width="100" height="30"/>
+                </children>
                 <styles xmi:type="notation:SortingStyle" xmi:id="_tuY8mNckEe2IKOwMig_amw"/>
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_tuY8mdckEe2IKOwMig_amw"/>
               </children>
@@ -76,62 +120,94 @@
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_i5_wctclEe2IKOwMig_amw" x="-42" y="60" width="50" height="50"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_tuY8lNckEe2IKOwMig_amw" fontName="Noto Sans"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tuY8ldckEe2IKOwMig_amw" x="247" y="54" width="265" height="133"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tuY8ldckEe2IKOwMig_amw" x="283" y="54" width="265" height="133"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_pEq04dcjEe2IKOwMig_amw"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_pEq04tcjEe2IKOwMig_amw"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_pEnxkdcjEe2IKOwMig_amw" fontName="Noto Sans"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pEnxktcjEe2IKOwMig_amw" x="12" y="12" width="541" height="361"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pEnxktcjEe2IKOwMig_amw" x="12" y="12" width="577" height="361"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_kUmcYtZYEe2LpKqGB_tuOw"/>
-        <edges xmi:type="notation:Edge" xmi:id="_eZF0QtcpEe2hCZi-pwhBSQ" visible="false" type="4001" element="_eXrfAtcpEe2hCZi-pwhBSQ" source="_i5_wcNclEe2IKOwMig_amw" target="_tuYVgNckEe2IKOwMig_amw">
-          <children xmi:type="notation:Node" xmi:id="_eZGbUNcpEe2hCZi-pwhBSQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eZGbUdcpEe2hCZi-pwhBSQ" x="-2" y="-10"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_eZGbUtcpEe2hCZi-pwhBSQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eZGbU9cpEe2hCZi-pwhBSQ" x="1" y="11"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_eZGbVNcpEe2hCZi-pwhBSQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eZGbVdcpEe2hCZi-pwhBSQ" x="4" y="10"/>
-          </children>
-          <styles xmi:type="notation:ConnectorStyle" xmi:id="_eZF0Q9cpEe2hCZi-pwhBSQ"/>
-          <styles xmi:type="notation:FontStyle" xmi:id="_eZF0RNcpEe2hCZi-pwhBSQ" fontName="Noto Sans" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_eZF0RdcpEe2hCZi-pwhBSQ" points="[-25, 6, 108, -29]$[-90, 23, 43, -12]"/>
-          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_eZHCYNcpEe2hCZi-pwhBSQ" id="(0.5,0.5)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_eZHCYdcpEe2hCZi-pwhBSQ" id="(0.5,0.4004149377593361)"/>
-        </edges>
         <edges xmi:type="notation:Edge" xmi:id="_75sLYNcpEe2hCZi-pwhBSQ" type="4001" element="_75pvKdcpEe2hCZi-pwhBSQ" source="_i57fANclEe2IKOwMig_amw" target="_pEnxkNcjEe2IKOwMig_amw">
           <children xmi:type="notation:Node" xmi:id="_75sLZNcpEe2hCZi-pwhBSQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_75sLZdcpEe2hCZi-pwhBSQ" x="-1" y="-8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_75sLZdcpEe2hCZi-pwhBSQ" x="10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_75sLZtcpEe2hCZi-pwhBSQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_75sLZ9cpEe2hCZi-pwhBSQ" x="2" y="11"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_75sLZ9cpEe2hCZi-pwhBSQ" x="-10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_75sLaNcpEe2hCZi-pwhBSQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_75sLadcpEe2hCZi-pwhBSQ" x="5" y="9"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_75sLadcpEe2hCZi-pwhBSQ" x="-10"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_75sLYdcpEe2hCZi-pwhBSQ"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_75sLYtcpEe2hCZi-pwhBSQ" fontName="Noto Sans" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_75sLY9cpEe2hCZi-pwhBSQ" points="[25, 21, -136, -116]$[-96, -43, -257, -180]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_75sLY9cpEe2hCZi-pwhBSQ" points="[25, 7, -202, -64]$[28, -109, -199, -180]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_75sycNcpEe2hCZi-pwhBSQ" id="(0.5,0.5)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_75sycdcpEe2hCZi-pwhBSQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_75sycdcpEe2hCZi-pwhBSQ" id="(0.46880415944540726,0.5)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_CvCSkNcqEe2hCZi-pwhBSQ" type="4001" element="_CtjE1NcqEe2hCZi-pwhBSQ" source="_i5_wcNclEe2IKOwMig_amw" target="_tuYVgNckEe2IKOwMig_amw">
           <children xmi:type="notation:Node" xmi:id="_CvCSlNcqEe2hCZi-pwhBSQ" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CvCSldcqEe2hCZi-pwhBSQ" x="-2" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CvCSldcqEe2hCZi-pwhBSQ" x="-2" y="12"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_CvCSltcqEe2hCZi-pwhBSQ" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CvCSl9cqEe2hCZi-pwhBSQ" x="4" y="11"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CvCSl9cqEe2hCZi-pwhBSQ" x="4" y="-9"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_CvCSmNcqEe2hCZi-pwhBSQ" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CvCSmdcqEe2hCZi-pwhBSQ" x="2" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_CvCSmdcqEe2hCZi-pwhBSQ" x="4" y="-7"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_CvCSkdcqEe2hCZi-pwhBSQ"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_CvCSktcqEe2hCZi-pwhBSQ" fontName="Noto Sans" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_CvCSk9cqEe2hCZi-pwhBSQ" points="[-25, 2, 108, -9]$[-90, 7, 43, -4]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_CvCSk9cqEe2hCZi-pwhBSQ" points="[-25, 1, 144, -10]$[-54, 3, 115, -8]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_CvC5oNcqEe2hCZi-pwhBSQ" id="(0.5,0.5)"/>
-          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_CvC5odcqEe2hCZi-pwhBSQ" id="(0.5,0.4004149377593361)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_CvC5odcqEe2hCZi-pwhBSQ" id="(0.27070063694267515,0.4004149377593361)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_EYFP0NcxEe21GMTvNB1bMg" type="4001" element="_EWf7ctcxEe21GMTvNB1bMg" source="_Pj3BMNcwEe21GMTvNB1bMg" target="_Cv60oNcwEe21GMTvNB1bMg">
+          <children xmi:type="notation:Node" xmi:id="_EYGd8NcxEe21GMTvNB1bMg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EYGd8dcxEe21GMTvNB1bMg" x="9" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_EYHsENcxEe21GMTvNB1bMg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EYHsEdcxEe21GMTvNB1bMg" x="-9" y="-5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_EYHsEtcxEe21GMTvNB1bMg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EYHsE9cxEe21GMTvNB1bMg" x="-9" y="-5"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_EYFP0dcxEe21GMTvNB1bMg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_EYFP0tcxEe21GMTvNB1bMg" fontName="Noto Sans" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_EYFP09cxEe21GMTvNB1bMg" points="[-10, -15, 27, 45]$[-22, -35, 15, 25]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EYI6MNcxEe21GMTvNB1bMg" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EYI6MdcxEe21GMTvNB1bMg" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_EYJhQNcxEe21GMTvNB1bMg" type="4001" element="_EWgihNcxEe21GMTvNB1bMg" source="_Pj4PUNcwEe21GMTvNB1bMg" target="_i57fANclEe2IKOwMig_amw">
+          <children xmi:type="notation:Node" xmi:id="_EYJhRNcxEe21GMTvNB1bMg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EYJhRdcxEe21GMTvNB1bMg" x="11"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_EYJhRtcxEe21GMTvNB1bMg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EYJhR9cxEe21GMTvNB1bMg" x="-2" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_EYJhSNcxEe21GMTvNB1bMg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EYJhSdcxEe21GMTvNB1bMg" x="-2" y="7"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_EYJhQdcxEe21GMTvNB1bMg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_EYJhQtcxEe21GMTvNB1bMg" fontName="Noto Sans" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_EYJhQ9cxEe21GMTvNB1bMg" points="[-50, 0, 65, 0]$[-90, 0, 25, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EYKIUNcxEe21GMTvNB1bMg" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_EYKIUdcxEe21GMTvNB1bMg" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_JA3Y2NcxEe21GMTvNB1bMg" type="4001" element="_JA2KutcxEe21GMTvNB1bMg" source="_JA3Y0NcxEe21GMTvNB1bMg" target="_AkF3QNclEe2IKOwMig_amw">
+          <children xmi:type="notation:Node" xmi:id="_JA3_4NcxEe21GMTvNB1bMg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JA3_4dcxEe21GMTvNB1bMg" x="7" y="6"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_JA3_4tcxEe21GMTvNB1bMg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JA3_49cxEe21GMTvNB1bMg" x="-6" y="-8"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_JA3_5NcxEe21GMTvNB1bMg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JA3_5dcxEe21GMTvNB1bMg" x="-5" y="-8"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_JA3Y2dcxEe21GMTvNB1bMg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_JA3Y2tcxEe21GMTvNB1bMg" fontName="Noto Sans" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_JA3Y29cxEe21GMTvNB1bMg" points="[-10, -15, 34, 54]$[-25, -39, 19, 30]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JA3_5tcxEe21GMTvNB1bMg" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_JA3_59cxEe21GMTvNB1bMg" id="(0.5,0.5)"/>
         </edges>
       </data>
     </ownedAnnotationEntries>
@@ -148,10 +224,10 @@
         <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/HomeViewpointSpecification/description/HomeViewpointSpecification.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='HMS%20Diagram']/@defaultLayer/@containerMappings[name='HouseContainer']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/HomeViewpointSpecification/description/HomeViewpointSpecification.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='HMS%20Diagram']/@defaultLayer/@containerMappings[name='HouseContainer']"/>
-      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_ttN34NckEe2IKOwMig_amw" name="hallway" incomingEdges="_eXrfAtcpEe2hCZi-pwhBSQ _CtjE1NcqEe2hCZi-pwhBSQ">
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_ttN34NckEe2IKOwMig_amw" name="hallway" incomingEdges="_CtjE1NcqEe2hCZi-pwhBSQ">
         <target xmi:type="hms:Room" href="example.home.hms#//@house/@rooms.0"/>
         <semanticElements xmi:type="hms:Room" href="example.home.hms#//@house/@rooms.0"/>
-        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_i50KRtclEe2IKOwMig_amw" name="main door" outgoingEdges="_75pvKdcpEe2hCZi-pwhBSQ" width="5" height="5" resizeKind="NSEW">
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_i50KRtclEe2IKOwMig_amw" name="main door" outgoingEdges="_75pvKdcpEe2hCZi-pwhBSQ" incomingEdges="_EWgihNcxEe21GMTvNB1bMg" width="5" height="5" resizeKind="NSEW">
           <target xmi:type="hms:Door" href="example.home.hms#//@house/@rooms.0/@fenestration.0"/>
           <semanticElements xmi:type="hms:Door" href="example.home.hms#//@house/@rooms.0/@fenestration.0"/>
           <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -169,11 +245,44 @@
           <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/HomeViewpointSpecification/description/HomeViewpointSpecification.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='HMS%20Diagram']/@defaultLayer/@containerMappings[name='HouseContainer']/@subContainerMappings[name='RoomContainer']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/HomeViewpointSpecification/description/HomeViewpointSpecification.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='HMS%20Diagram']/@defaultLayer/@containerMappings[name='HouseContainer']/@subContainerMappings[name='RoomContainer']"/>
+        <ownedDiagramElements xmi:type="diagram:DNode" uid="_Cv2jMtcwEe21GMTvNB1bMg" name="Ceiling Light" incomingEdges="_EWf7ctcxEe21GMTvNB1bMg" width="5" height="5" resizeKind="NSEW">
+          <target xmi:type="hms:Lightbulb" href="example.home.hms#//@house/@rooms.0/@lightbulbs.0"/>
+          <semanticElements xmi:type="hms:Lightbulb" href="example.home.hms#//@house/@rooms.0/@lightbulbs.0"/>
+          <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+          <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+          <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+          <ownedStyle xmi:type="diagram:Dot" uid="_Cv3KQNcwEe21GMTvNB1bMg" labelSize="6" labelPosition="node" strokeSizeComputationExpression="0" backgroundColor="255,245,181">
+            <description xmi:type="style:DotDescription" href="platform:/resource/HomeViewpointSpecification/description/HomeViewpointSpecification.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='HMS%20Diagram']/@defaultLayer/@containerMappings[name='HouseContainer']/@subContainerMappings[name='RoomContainer']/@subNodeMappings[name='LightbulbNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/HomeViewpointSpecification/description/HomeViewpointSpecification.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='HMS%20Diagram']/@defaultLayer/@containerMappings[name='HouseContainer']/@subContainerMappings[name='RoomContainer']/@subNodeMappings[name='LightbulbNode']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" uid="_Pi7NENcwEe21GMTvNB1bMg" name="Main Light Switch" outgoingEdges="_EWf7ctcxEe21GMTvNB1bMg" width="10" height="3" resizeKind="NSEW">
+          <target xmi:type="hms:Switch" href="example.home.hms#//@house/@rooms.0/@switches.0"/>
+          <semanticElements xmi:type="hms:Switch" href="example.home.hms#//@house/@rooms.0/@switches.0"/>
+          <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+          <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+          <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+          <ownedStyle xmi:type="diagram:Square" uid="_RtF-kdcwEe21GMTvNB1bMg" labelSize="6" labelPosition="node" width="10" height="3" color="209,209,209">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/HomeViewpointSpecification/description/HomeViewpointSpecification.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='HMS%20Diagram']/@defaultLayer/@containerMappings[name='HouseContainer']/@subContainerMappings[name='RoomContainer']/@subNodeMappings[name='SwitchNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/HomeViewpointSpecification/description/HomeViewpointSpecification.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='HMS%20Diagram']/@defaultLayer/@containerMappings[name='HouseContainer']/@subContainerMappings[name='RoomContainer']/@subNodeMappings[name='SwitchNode']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" uid="_Pi70INcwEe21GMTvNB1bMg" name="door (un-)locker" outgoingEdges="_EWgihNcxEe21GMTvNB1bMg" width="10" height="3" resizeKind="NSEW">
+          <target xmi:type="hms:Switch" href="example.home.hms#//@house/@rooms.0/@switches.1"/>
+          <semanticElements xmi:type="hms:Switch" href="example.home.hms#//@house/@rooms.0/@switches.1"/>
+          <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+          <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+          <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+          <ownedStyle xmi:type="diagram:Square" uid="_RtF-k9cwEe21GMTvNB1bMg" labelSize="6" labelPosition="node" width="10" height="3" color="209,209,209">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/HomeViewpointSpecification/description/HomeViewpointSpecification.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='HMS%20Diagram']/@defaultLayer/@containerMappings[name='HouseContainer']/@subContainerMappings[name='RoomContainer']/@subNodeMappings[name='SwitchNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/HomeViewpointSpecification/description/HomeViewpointSpecification.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='HMS%20Diagram']/@defaultLayer/@containerMappings[name='HouseContainer']/@subContainerMappings[name='RoomContainer']/@subNodeMappings[name='SwitchNode']"/>
+        </ownedDiagramElements>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_ttN34dckEe2IKOwMig_amw" name="bedroom">
         <target xmi:type="hms:Room" href="example.home.hms#//@house/@rooms.1"/>
         <semanticElements xmi:type="hms:Room" href="example.home.hms#//@house/@rooms.1"/>
-        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_i50xUdclEe2IKOwMig_amw" name="Bedroom Door" outgoingEdges="_eXrfAtcpEe2hCZi-pwhBSQ _CtjE1NcqEe2hCZi-pwhBSQ" width="5" height="5" resizeKind="NSEW">
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_i50xUdclEe2IKOwMig_amw" name="Bedroom Door" outgoingEdges="_CtjE1NcqEe2hCZi-pwhBSQ" width="5" height="5" resizeKind="NSEW">
           <target xmi:type="hms:Door" href="example.home.hms#//@house/@rooms.1/@fenestration.2"/>
           <semanticElements xmi:type="hms:Door" href="example.home.hms#//@house/@rooms.1/@fenestration.2"/>
           <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -191,7 +300,7 @@
           <description xmi:type="style:WorkspaceImageDescription" href="platform:/resource/HomeViewpointSpecification/description/HomeViewpointSpecification.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='HMS%20Diagram']/@defaultLayer/@containerMappings[name='HouseContainer']/@subContainerMappings[name='RoomContainer']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/HomeViewpointSpecification/description/HomeViewpointSpecification.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='HMS%20Diagram']/@defaultLayer/@containerMappings[name='HouseContainer']/@subContainerMappings[name='RoomContainer']"/>
-        <ownedDiagramElements xmi:type="diagram:DNode" uid="_AkEpJNclEe2IKOwMig_amw" name="Window&#xA;left" width="6" height="6" resizeKind="NSEW">
+        <ownedDiagramElements xmi:type="diagram:DNode" uid="_AkEpJNclEe2IKOwMig_amw" name="Window&#xA;left" incomingEdges="_JA2KutcxEe21GMTvNB1bMg" width="6" height="6" resizeKind="NSEW">
           <target xmi:type="hms:Window" href="example.home.hms#//@house/@rooms.1/@fenestration.0"/>
           <semanticElements xmi:type="hms:Window" href="example.home.hms#//@house/@rooms.1/@fenestration.0"/>
           <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -213,15 +322,18 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/HomeViewpointSpecification/description/HomeViewpointSpecification.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='HMS%20Diagram']/@defaultLayer/@containerMappings[name='HouseContainer']/@subContainerMappings[name='RoomContainer']/@subNodeMappings[name='Window']"/>
         </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" uid="_JA1jpNcxEe21GMTvNB1bMg" name="windowController" outgoingEdges="_JA2KutcxEe21GMTvNB1bMg" width="10" height="3" resizeKind="NSEW">
+          <target xmi:type="hms:Switch" href="example.home.hms#//@house/@rooms.1/@switches.0"/>
+          <semanticElements xmi:type="hms:Switch" href="example.home.hms#//@house/@rooms.1/@switches.0"/>
+          <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+          <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+          <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+          <ownedStyle xmi:type="diagram:Square" uid="_JA1jpdcxEe21GMTvNB1bMg" labelSize="6" labelPosition="node" width="10" height="3" color="209,209,209">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/HomeViewpointSpecification/description/HomeViewpointSpecification.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='HMS%20Diagram']/@defaultLayer/@containerMappings[name='HouseContainer']/@subContainerMappings[name='RoomContainer']/@subNodeMappings[name='SwitchNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/HomeViewpointSpecification/description/HomeViewpointSpecification.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='HMS%20Diagram']/@defaultLayer/@containerMappings[name='HouseContainer']/@subContainerMappings[name='RoomContainer']/@subNodeMappings[name='SwitchNode']"/>
+        </ownedDiagramElements>
       </ownedDiagramElements>
-    </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_eXrfAtcpEe2hCZi-pwhBSQ" visible="false" sourceNode="_i50xUdclEe2IKOwMig_amw" targetNode="_ttN34NckEe2IKOwMig_amw">
-      <target xmi:type="hms:Door" href="example.home.hms#//@house/@rooms.1/@fenestration.2"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_eXrfA9cpEe2hCZi-pwhBSQ" size="2">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/HomeViewpointSpecification/description/HomeViewpointSpecification.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='HMS%20Diagram']/@defaultLayer/@edgeMappings[name='DoorOtherRoom']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_eXrfBNcpEe2hCZi-pwhBSQ" labelSize="12"/>
-      </ownedStyle>
-      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/HomeViewpointSpecification/description/HomeViewpointSpecification.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='HMS%20Diagram']/@defaultLayer/@edgeMappings[name='DoorOtherRoom']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_75pvKdcpEe2hCZi-pwhBSQ" sourceNode="_i50KRtclEe2IKOwMig_amw" targetNode="_YcnBANckEe2IKOwMig_amw">
       <target xmi:type="hms:Door" href="example.home.hms#//@house/@rooms.0/@fenestration.0"/>
@@ -238,6 +350,30 @@
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_CtjE1tcqEe2hCZi-pwhBSQ" labelSize="12"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/HomeViewpointSpecification/description/HomeViewpointSpecification.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='HMS%20Diagram']/@defaultLayer/@edgeMappings[name='DoorToOtherRoom']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_EWf7ctcxEe21GMTvNB1bMg" sourceNode="_Pi7NENcwEe21GMTvNB1bMg" targetNode="_Cv2jMtcwEe21GMTvNB1bMg">
+      <target xmi:type="hms:Switch" href="example.home.hms#//@house/@rooms.0/@switches.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_EWgigNcxEe21GMTvNB1bMg" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/HomeViewpointSpecification/description/HomeViewpointSpecification.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='HMS%20Diagram']/@defaultLayer/@edgeMappings[name='SwitchToTarget']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_EWgigdcxEe21GMTvNB1bMg" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/HomeViewpointSpecification/description/HomeViewpointSpecification.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='HMS%20Diagram']/@defaultLayer/@edgeMappings[name='SwitchToTarget']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_EWgihNcxEe21GMTvNB1bMg" sourceNode="_Pi70INcwEe21GMTvNB1bMg" targetNode="_i50KRtclEe2IKOwMig_amw">
+      <target xmi:type="hms:Switch" href="example.home.hms#//@house/@rooms.0/@switches.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_EWgihdcxEe21GMTvNB1bMg" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/HomeViewpointSpecification/description/HomeViewpointSpecification.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='HMS%20Diagram']/@defaultLayer/@edgeMappings[name='SwitchToTarget']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_EWgihtcxEe21GMTvNB1bMg" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/HomeViewpointSpecification/description/HomeViewpointSpecification.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='HMS%20Diagram']/@defaultLayer/@edgeMappings[name='SwitchToTarget']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_JA2KutcxEe21GMTvNB1bMg" sourceNode="_JA1jpNcxEe21GMTvNB1bMg" targetNode="_AkEpJNclEe2IKOwMig_amw">
+      <target xmi:type="hms:Switch" href="example.home.hms#//@house/@rooms.1/@switches.0"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_JA2Ku9cxEe21GMTvNB1bMg" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/HomeViewpointSpecification/description/HomeViewpointSpecification.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='HMS%20Diagram']/@defaultLayer/@edgeMappings[name='SwitchToTarget']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_JA2KvNcxEe21GMTvNB1bMg" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/HomeViewpointSpecification/description/HomeViewpointSpecification.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='HMS%20Diagram']/@defaultLayer/@edgeMappings[name='SwitchToTarget']"/>
     </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/resource/HomeViewpointSpecification/description/HomeViewpointSpecification.odesign#//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='HMS%20Diagram']"/>
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_kUV9sNZYEe2LpKqGB_tuOw"/>

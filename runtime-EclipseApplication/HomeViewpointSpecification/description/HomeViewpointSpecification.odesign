@@ -19,6 +19,14 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
+        <edgeMappings name="SwitchToTarget" sourceMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='HMS%20Diagram']/@defaultLayer/@containerMappings[name='HouseContainer']/@subContainerMappings[name='RoomContainer']/@subNodeMappings[name='SwitchNode']" targetMapping="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='HMS%20Diagram']/@defaultLayer/@containerMappings[name='HouseContainer']/@subContainerMappings[name='RoomContainer']/@subNodeMappings[name='Window'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='HMS%20Diagram']/@defaultLayer/@containerMappings[name='HouseContainer']/@subContainerMappings[name='RoomContainer']/@borderedNodeMappings[name='DoorNode'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='HMS%20Diagram']/@defaultLayer/@containerMappings[name='HouseContainer']/@subContainerMappings[name='RoomContainer']/@subNodeMappings[name='LightbulbNode']" targetFinderExpression="aql:self.target->select(t | not t.oclIsKindOf(hms::Lock)) + self.target->select(t | t.oclIsKindOf(hms::Lock)).holder">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
         <containerMappings name="HouseContainer" domainClass="hms::House">
           <subContainerMappings name="RoomContainer" semanticCandidatesExpression="feature:eAllContents" domainClass="hms::Room">
             <borderedNodeMappings name="DoorNode" semanticCandidatesExpression="aql:self.fenestration->filter(hms::Door)" domainClass="hms::Door">
@@ -33,6 +41,20 @@
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+              </style>
+            </subNodeMappings>
+            <subNodeMappings name="LightbulbNode" semanticCandidatesExpression="feature:eAllContents" domainClass="hms::Lightbulb">
+              <style xsi:type="style:DotDescription" labelSize="6" sizeComputationExpression="5" labelPosition="node" resizeKind="NSEW" strokeSizeComputationExpression="0">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+              </style>
+            </subNodeMappings>
+            <subNodeMappings name="SwitchNode" semanticCandidatesExpression="feature:eAllContents" domainClass="hms::Switch">
+              <style xsi:type="style:SquareDescription" labelSize="6" labelPosition="node" resizeKind="NSEW" width="10" height="3">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
               </style>
             </subNodeMappings>
             <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="1" labelSize="12" sizeComputationExpression="-1">
