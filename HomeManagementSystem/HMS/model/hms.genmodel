@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/HMS/src-gen" editDirectory="/HMS.edit/src-gen"
-    editorDirectory="/HMS.editor/src-gen" modelPluginID="HMS" modelName="HMS" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
-    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
-    operationReflection="true" importOrganizing="true">
+    editorDirectory="/HMS.editor/src-gen" modelPluginID="HMS" modelName="Hms" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    testsDirectory="/HMS.tests/src-gen" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
   <foreignModel>hms.ecore</foreignModel>
   <genPackages prefix="Hms" disposableProviderFactory="true" ecorePackage="hms.ecore#/">
     <genClasses ecoreClass="hms.ecore#//HMS">
@@ -17,22 +17,24 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hms.ecore#//Room/fenestration"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hms.ecore#//Room/targetTemp"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hms.ecore#//Room/currentTemp"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hms.ecore#//Room/switches"/>
     </genClasses>
     <genClasses ecoreClass="hms.ecore#//Lightbulb">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hms.ecore#//Lightbulb/room"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference hms.ecore#//Lightbulb/room"/>
     </genClasses>
     <genClasses ecoreClass="hms.ecore#//Switch">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hms.ecore#//Switch/on"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hms.ecore#//Switch/target"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference hms.ecore#//Switch/room"/>
     </genClasses>
     <genClasses image="false" ecoreClass="hms.ecore#//Fenestration">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hms.ecore#//Fenestration/room"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference hms.ecore#//Fenestration/room"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hms.ecore#//Fenestration/open"/>
     </genClasses>
     <genClasses ecoreClass="hms.ecore#//Door">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference hms.ecore#//Door/otherRoom"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference hms.ecore#//Door/otherRoom"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute hms.ecore#//Door/toOutside"/>
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference hms.ecore#//Door/lock"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference hms.ecore#//Door/lock"/>
     </genClasses>
     <genClasses ecoreClass="hms.ecore#//Window"/>
     <genClasses image="false" ecoreClass="hms.ecore#//Switchable">
