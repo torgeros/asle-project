@@ -5,18 +5,18 @@
     <stringAttribute key="ATL_COMPILER" value="atl2006"/>
     <booleanAttribute key="IS_REFINING" value="false"/>
     <mapAttribute key="Input">
-        <mapEntry key="IN" value="HMS"/>
+        <mapEntry key="IN" value="hms"/>
     </mapAttribute>
     <mapAttribute key="Libs"/>
     <mapAttribute key="Model Handler">
-        <mapEntry key="HMS" value="EMF"/>
-        <mapEntry key="URN" value="EMF"/>
+        <mapEntry key="hms" value="EMF"/>
+        <mapEntry key="urn" value="EMF"/>
     </mapAttribute>
     <mapAttribute key="ModelType">
-        <mapEntry key="HMS" value="METAMODELINPUT"/>
         <mapEntry key="IN" value="MODELINPUT"/>
         <mapEntry key="OUT" value="MODELOUTPUT"/>
-        <mapEntry key="URN" value="METAMODELOUTPUT"/>
+        <mapEntry key="hms" value="METAMODELINPUT"/>
+        <mapEntry key="urn" value="METAMODELOUTPUT"/>
     </mapAttribute>
     <mapAttribute key="Options">
         <mapEntry key="OPTION_CLEAR" value="false"/>
@@ -34,13 +34,13 @@
         <listEntry value="OUT"/>
     </listAttribute>
     <mapAttribute key="Output">
-        <mapEntry key="OUT" value="URN"/>
+        <mapEntry key="OUT" value="urn"/>
     </mapAttribute>
     <mapAttribute key="Path">
-        <mapEntry key="HMS" value="/HMS/model/hms.ecore"/>
         <mapEntry key="IN" value="/ATL.HMS/input/example.home.hms"/>
         <mapEntry key="OUT" value="/ATL.HMS/output/example.home.jucm"/>
-        <mapEntry key="URN" value="/seg.jUCMNav/src/seg/jUCMNav/emf/urn.ecore"/>
+        <mapEntry key="hms" value="/HMS/model/hms.ecore"/>
+        <mapEntry key="urn" value="/seg.jUCMNav/src/seg/jUCMNav/emf/urn.ecore"/>
     </mapAttribute>
     <listAttribute key="Superimpose"/>
     <stringAttribute key="bad_container_name" value="/ATL.HMS/runconfigs/example.home.runconfig"/>

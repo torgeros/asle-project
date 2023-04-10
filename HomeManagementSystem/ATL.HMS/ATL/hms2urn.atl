@@ -1,3 +1,28 @@
-module hms2urn;
-create OUT : URN from IN : HMS;
+--@path MM_name = /HMS/model/hms.ecore
+--@path MM_name = /seg.jUCMNav/src/seg/jUCMNav/emf/urncore.ecore 
+--@path MM_name = /seg.jUCMNav/src/seg/jUCMNav/emf/ucm.ecore 
 
+module hms2urn;
+create OUT: urn from IN: hms;
+
+entrypoint rule CreateFile() {
+	to
+	spec: urn!URNspec,
+	urndef: urn!URNdefinition (
+		urnspec <- spec
+	)
+	do {
+		'ATL project running...'.debug();
+		thisModule.urndef <- urndef;
+	}
+}
+
+rule Container {
+	from system: hms!HMS
+	to
+	-- diagram setup
+	map: urn!UCMmap (
+		urndefinition <- thisModule.urndef,
+		name <- system.house.name
+	)
+}
