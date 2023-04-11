@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hms:HMS xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hms="http://mcgill.ca/ecse539/homeautomation/hms">
+  <house name="500 example road">
+    <rooms name="entry area">
+      <fenestration xsi:type="hms:Door" switch="//@house/@rooms.0/@switches.1" name="main door" toOutside="true">
+        <lock switch="//@house/@rooms.0/@switches.0"/>
+      </fenestration>
+      <switches name="door locker" target="//@house/@rooms.0/@fenestration.0/@lock"/>
+      <switches name="open and close door" target="//@house/@rooms.0/@fenestration.0"/>
+    </rooms>
+  </house>
+</hms:HMS>
