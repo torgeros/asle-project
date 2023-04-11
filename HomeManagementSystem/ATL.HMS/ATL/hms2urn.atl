@@ -353,43 +353,123 @@ rule DoorSwitch {
 	
 	_conditionUNLOCKED : urn!Condition
 	(
-		label <- 'UNLOCKED',
+		label <- 'switch: unlock door',
 		nodeConnection <- _connection2 
 	),
 	
 	_conditionLOCKED : urn!Condition
 	(
-		label <- 'LOCKED',
+		label <- 'switch: lock door',
 		nodeConnection <- _connection4 
 	),
 	
 	_conditionLOCKED1 : urn!Condition
 	(
-		label <- 'LOCKED',
+		label <- 'door is locked',
 		nodeConnection <- _connection6 
 	),
 	
 	_conditionUNLOCKED1 : urn!Condition
 	(
-		label <- 'UNLOCKED',
+		label <- 'door is unlocked',
 		nodeConnection <- _connection12
 	),
 	
 	
 	_conditionCLOSED : urn!Condition
 	(
-		label <- 'CLOSED',
+		label <- 'door is closed',
 		nodeConnection <- _connection11 
 	),
 	_conditionOPEN : urn!Condition
 	(
-		label <- 'OPEN',
+		label <- 'door is open',
 		nodeConnection <- _connection5 
 	)
 	
 	
 }
 
+rule FenestrationOpenSwitch {
+	from 
+		_fenestration : hms!Fenestration
+	to
+	_orfork : urn!OrFork
+	(
+		diagram <- thisModule.resolveTemp(_fenestration.switch, '_ucmmap')
+	),
+	_orjoin : urn!OrJoin
+	(
+		diagram <- thisModule.resolveTemp(_fenestration.switch, '_ucmmap')
+	),
+	_resp_open : urn!Responsibility
+	(
+		name <- 'Open FENESTRATION',
+		urndefinition <- thisModule.resolveTemp(_fenestration.room.house, '_URNdefinition')
+	),
+	_respRef_open : urn!RespRef 
+	(
+		diagram <- thisModule.resolveTemp(_fenestration.switch, '_ucmmap'),
+		respDef <- _resp_open
+	),
+	_resp_close: urn!Responsibility
+	(
+		name <- 'Close FENESTRATION',
+		urndefinition <- thisModule.resolveTemp(_fenestration.room.house, '_URNdefinition')
+	),
+	_respRef_close : urn!RespRef 
+	(
+		diagram <- thisModule.resolveTemp(_fenestration.switch, '_ucmmap'),
+		respDef <- _resp_close
+	),
+	
+	_connection1 : urn!NodeConnection
+	(
+		source <- thisModule.resolveTemp(_fenestration.switch, '_startpoint'),
+		target <- _orfork,
+		diagram <- thisModule.resolveTemp(_fenestration.switch, '_ucmmap')
+	),
+	_connection2 : urn!NodeConnection
+	(
+		source <- _orfork,
+		target <- _respRef_open,
+		diagram <- thisModule.resolveTemp(_fenestration.switch, '_ucmmap')
+	),
+	_connection3 : urn!NodeConnection
+	(
+		source <- _respRef_open,
+		target <- _orjoin,
+		diagram <- thisModule.resolveTemp(_fenestration.switch, '_ucmmap')
+	),
+	_connection4 : urn!NodeConnection
+	(
+		source <- _orjoin,
+		target <- thisModule.resolveTemp(_fenestration.switch, '_endpoint'),
+		diagram <- thisModule.resolveTemp(_fenestration.switch, '_ucmmap')
+	),
+	_connection5: urn!NodeConnection
+	(
+		source <- _orfork,
+		target <- _respRef_close,
+		diagram <- thisModule.resolveTemp(_fenestration.switch, '_ucmmap')
+	),
+	_connection6 : urn!NodeConnection
+	(
+		source <- _respRef_close,
+		target <- _orjoin,
+		diagram <- thisModule.resolveTemp(_fenestration.switch, '_ucmmap')
+	),
+	_conditionON : urn!Condition
+	(
+		label <- 'switch: open',
+		nodeConnection <- _connection2
+	),
+	_conditionOFF : urn!Condition
+	(
+		label <- 'switch: close',
+		nodeConnection <- _connection5
+	)
+}
 
 rule LightbulbSwitch {
 	from 
@@ -469,13 +549,13 @@ rule LightbulbSwitch {
 	
 	_conditionON : urn!Condition
 	(
-		label <- 'ON',
+		label <- 'switch: turn on',
 		nodeConnection <- _connection2
 	),
 	
 	_conditionOFF : urn!Condition
 	(
-		label <- 'OFF',
+		label <- 'switch: turn off',
 		nodeConnection <- _connection5
 	)
 	
