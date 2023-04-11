@@ -206,9 +206,13 @@ rule DoorSwitch {
 	_respRef_close2 : urn!RespRef 
 	(
 		diagram <- thisModule.resolveTemp(_lock.switch, '_ucmmap'),
+			name <- _resp_close.name,
 		hostDemand <- 'Close Door',
-		respDef <- _resp_close
+		respDef <- _resp_close,
+		label <- _respRef_close2_label
 	),
+	
+	_respRef_close2_label : urn!NodeLabel,
 	
 	_resp_lock : urn!Responsibility
 	(
@@ -219,9 +223,13 @@ rule DoorSwitch {
 	_respRef_lock : urn!RespRef 
 	(
 		diagram <- thisModule.resolveTemp(_lock.switch, '_ucmmap'),
+		name <- _resp_lock.name,
 		hostDemand <- 'Lock Door',
-		respDef <- _resp_lock
+		respDef <- _resp_lock,
+		label <- _respRef_lock_label
 	),
+	
+	_respRef_lock_label : urn!NodeLabel,
 	
 	_resp_unlock : urn!Responsibility
 	(
@@ -233,16 +241,24 @@ rule DoorSwitch {
 	_respRef_unlock1 : urn!RespRef 
 	(
 		diagram <- thisModule.resolveTemp(_lock.switch, '_ucmmap'),
+		name <- _resp_unlock.name,
 		hostDemand <- 'Unlock Door',
-		respDef <- _resp_unlock
+		respDef <- _resp_unlock,
+		label <- _respRef_unlock1_label
 	),
+	
+	_respRef_unlock1_label : urn!NodeLabel,
 	
 	_respRef_unlock2 : urn!RespRef 
 	(
 		diagram <- thisModule.resolveTemp(_lock.switch, '_ucmmap'),
+		name <- _resp_unlock.name,
 		hostDemand <- 'Unlock Door',
-		respDef <- _resp_unlock
+		respDef <- _resp_unlock,
+			label <- _respRef_unlock2_label
 	),
+	
+	_respRef_unlock2_label : urn!NodeLabel,
 	
 	_connection1 : urn!NodeConnection
 	(
@@ -412,8 +428,13 @@ rule FenestrationOpenSwitch {
 	_respRef_open : urn!RespRef 
 	(
 		diagram <- thisModule.resolveTemp(_fenestration.switch, '_ucmmap'),
-		respDef <- _resp_open
+			name <- _resp_open.name,
+		respDef <- _resp_open,
+		label <- _respRef_open_label
+		
 	),
+	_respRef_open_label : urn!NodeLabel,
+	
 	_resp_close: urn!Responsibility
 	(
 		name <- 'Close FENESTRATION',
@@ -421,9 +442,13 @@ rule FenestrationOpenSwitch {
 	),
 	_respRef_close : urn!RespRef 
 	(
+		name <- _resp_close.name,
 		diagram <- thisModule.resolveTemp(_fenestration.switch, '_ucmmap'),
-		respDef <- _resp_close
+		respDef <- _resp_close,
+		label <- _respRef_close_label
 	),
+	
+	_respRef_close_label : urn!NodeLabel,
 	
 	_connection1 : urn!NodeConnection
 	(
@@ -496,15 +521,28 @@ rule LightbulbSwitch {
 	_respRef_turnON : urn!RespRef 
 	(
 		diagram <- thisModule.resolveTemp(_lightbulb.switch, '_ucmmap'),
+		name <- _resp_turnOn.name,
 		hostDemand <- 'Turn Light ON',
-		respDef <- _resp_turnOn
+		respDef <- _resp_turnOn,
+		label <- _respRef_turnON_label
+	),
+	
+	_respRef_turnON_label : urn!NodeLabel,
+	
+	_resp_turnOff : urn!Responsibility
+	(
+		name <- 'Turn Light OFF',
+		urndefinition <- thisModule.resolveTemp(_lightbulb.room.house, '_URNdefinition')
 	),
 	
 	_respRef_turnOFF : urn!RespRef 
 	(
 		diagram <- thisModule.resolveTemp(_lightbulb.switch, '_ucmmap'),
-		name <- 'Turn Light OFF'
+		name <- _resp_turnOff.name,
+		resDef <- _resp_turnOff,
+		label <- _respRef_off_label
 	),
+	_respRef_off_label : urn!NodeLabel,
 	
 	_connection1 : urn!NodeConnection
 	(
