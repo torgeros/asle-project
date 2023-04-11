@@ -40,6 +40,53 @@ rule Container {
 		)	
 }
 
+endpoint rule setNodeCoordinatesForAllModels() {
+	do {
+		-- start placement of nodes for all diagrams, based on the start point of each
+		for (sn in thisModule.StartPointCollection) {
+			-- NOTE: y coords in here only work with negative COORD_Y_INCR (as it should be anyways by the assgmt specs)
+			thisModule.place(sn , sn.x, thisModule.CORNEROFFSET + (thisModule.COORD_Y_INCR.abs() * sn.heightOfSubdiagram(0)), 1);
+			sn.contRef.height <- thisModule.COORD_Y_INCR.abs() * (sn.heightOfSubdiagram(0) + 1);
+		}
+	}
+}
+
+rule place (node: urn!PathNode, x: Integer, y: Integer, orJoinsUntilStop: Integer) {
+	using {
+		nextX: Integer = x + thisModule.COORD_X_INCR;
+	}
+	do {
+		node.x <- x;
+		node.y <- y;
+		if (node.oclIsKindOf(urn!OrFork)) {
+			-- if isOrFork: place bottom, measure height of bottom arm (with included forks), place top arm above everything
+			-- longer arm is placed at bottom to be able to set the OrJoin directly at it's x+INCR/y coords.
+			if (node.orForkAt1IsLonger()) {
+				thisModule.place(node.succ.at(1).target, nextX, y, orJoinsUntilStop + 1);
+				let yIncrement: Integer = node.succ.at(1).target.heightOfSubdiagram(0) * thisModule.COORD_Y_INCR in
+				thisModule.place(node.succ.at(2).target, nextX, y + yIncrement, orJoinsUntilStop);
+			} else {
+				thisModule.place(node.succ.at(2).target, nextX, y, orJoinsUntilStop + 1);
+				let yIncrement: Integer = node.succ.at(2).target.heightOfSubdiagram(0) * thisModule.COORD_Y_INCR in
+				thisModule.place(node.succ.at(1).target, nextX, y + yIncrement, orJoinsUntilStop);
+			}
+		} else if (node.oclIsKindOf(urn!EndPoint)) {
+			-- endpoint as recursion return condition
+			node.contRef.width <- x + thisModule.COORDXMARGIN - thisModule.CORNEROFFSET;
+		} else {
+			if (node.succ.first().target.oclIsKindOf(urn!OrJoin)) {
+				-- if isOrJoin, place it. but only if allowed by orJoinsUntilStop param (used to not place joins twice)
+				if (orJoinsUntilStop > 1) {
+					thisModule.place(node.succ.first().target, nextX, y, orJoinsUntilStop - 1);
+				}
+			} else {
+				-- if no condition matched: just continue with next node
+				thisModule.place(node.succ.first().target, nextX, y, orJoinsUntilStop);
+			}
+		}
+	}
+}
+
 rule Switch {
 	from 
 		_switch : hms!Switch
@@ -100,6 +147,10 @@ rule Switch {
 			contRefs <- Set{_contRef}
 			--collect all path nodes here
 		)
+	do {
+		-- add startnode to collection for later placement
+		thisModule.StartPointCollection <- thisModule.StartPointCollection.including(_startpoint);
+	}
 }
 
 rule DoorSwitch {
@@ -430,3 +481,43 @@ rule LightbulbSwitch {
 	
 	
 }
+
+
+-- parameter: to keep track of all the start nodes, to be able to re-use them in the endpoint rule
+helper def: StartPointCollection: Bag(urn!StartPoint) = Bag{};
+
+-- helper: to figure out which arm of an or-split is longer
+helper context urn!OrFork def: orForkAt1IsLonger(): Boolean =
+	let node1: hms!BooleanExpression = self.succ.at(1).target in
+	let node2: hms!BooleanExpression = self.succ.at(2).target in
+	node1.nodesUntilOrJoin(0) >= node2.nodesUntilOrJoin(0);
+
+-- helper helper: measure length of nodes in an OR-arm, call with orJoinsUntilStop=0 on at(1) and at(2) and compare. undefined behaviour when there is no or join coming.
+helper context urn!PathNode def: nodesUntilOrJoin(orJoinsUntilStop: Integer): Integer =
+	if self.oclIsKindOf(urn!OrJoin) then
+		if orJoinsUntilStop = 0 then 0 else 1 + self.succ.at(1).target.nodesUntilOrJoin(orJoinsUntilStop - 1) endif
+	else if self.oclIsKindOf(urn!OrFork) then
+		1 + self.succ.at(1).target.nodesUntilOrJoin(orJoinsUntilStop + 1).
+		max(self.succ.at(2).target.nodesUntilOrJoin(orJoinsUntilStop + 1))
+	else
+		1 + self.succ.at(1).target.nodesUntilOrJoin(orJoinsUntilStop)
+	endif endif;
+
+-- helper: to find the height (in nodes / y-increments) of the subdiagram produced by a node until the next or-join. call with (0).
+helper context urn!PathNode def: heightOfSubdiagram(orJoinsUntilStop: Integer): Integer =
+	if self.oclIsKindOf(urn!OrJoin) then
+		if orJoinsUntilStop = 0 then 1 else self.succ.at(1).target.heightOfSubdiagram(orJoinsUntilStop - 1) endif
+	else if self.oclIsKindOf(urn!OrFork) then
+		self.succ.at(1).target.heightOfSubdiagram(orJoinsUntilStop + 1) + self.succ.at(2).target.heightOfSubdiagram(orJoinsUntilStop + 1)
+	else if self.oclIsKindOf(urn!EndPoint) then
+		1
+	else
+		self.succ.at(1).target.heightOfSubdiagram(orJoinsUntilStop)
+	endif endif endif;
+
+-- parameters: coordinate placement behaviour
+helper def: CORNEROFFSET: Integer = 50;
+helper def: COORD_X_INCR: Integer = 250;
+helper def: COORD_Y_DEFAULT: Integer = 200 + thisModule.CORNEROFFSET;
+helper def: COORD_Y_INCR: Integer = 0-100;
+helper def: COORDXMARGIN: Integer = 150;
