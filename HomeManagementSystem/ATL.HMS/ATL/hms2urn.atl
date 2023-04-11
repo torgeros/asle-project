@@ -549,7 +549,7 @@ rule LightbulbSwitch {
 	(
 		diagram <- thisModule.resolveTemp(_lightbulb.switch, '_ucmmap'),
 		name <- _resp_turnOff.name,
-		resDef <- _resp_turnOff,
+		respDef <- _resp_turnOff,
 		label <- _respRef_off_label
 	),
 	_respRef_off_label : urn!NodeLabel,
