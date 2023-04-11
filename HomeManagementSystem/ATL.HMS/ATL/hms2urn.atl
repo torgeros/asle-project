@@ -5,24 +5,384 @@
 module hms2urn;
 create OUT: urn from IN: hms;
 
-entrypoint rule CreateFile() {
-	to
-	spec: urn!URNspec,
-	urndef: urn!URNdefinition (
-		urnspec <- spec
-	)
-	do {
-		'ATL project running...'.debug();
-		thisModule.urndef <- urndef;
-	}
-}
+helper def: _y : Integer = 50;
+helper def: _x : Integer = 50;
+helper def: _deltax : Integer = 100;
+
 
 rule Container {
-	from system: hms!HMS
+    from 
+		_system : hms!House
 	to
-	-- diagram setup
-	map: urn!UCMmap (
-		urndefinition <- thisModule.urndef,
-		name <- system.house.name
+	
+		_URNdefinition : urn!URNdefinition
+		(	
+			urnspec <- _URNspec,
+			specDiagrams<-_system.rooms->collect(r | r.switches)->flatten()->collect(s | thisModule.resolveTemp(s, '_ucmmap'))->flatten(),
+			components<-_system.rooms->collect(r | r.switches)->flatten()->collect(s | thisModule.resolveTemp(s, '_component'))->flatten()
+		),
+	
+		_metadata : urn!Metadata 
+		(
+			name <- '_Use0to100EvaluationRange',
+			value <- 'false'
+		),
+
+		_URNspec : urn!URNspec 
+		(
+			metadata <- _metadata,
+			urndef <- _URNdefinition
+		),
+		
+		_ucmspec : urn!UCMspec
+		(
+			urnspec <- _URNspec
+		)	
+}
+
+rule Switch {
+	from 
+		_switch : hms!Switch
+	to
+		_startprecondition : urn!Condition
+		(
+			deltaX <- 40,
+			deltaY <- 17,
+			label <- '',
+			expression <- 'true'
+		),
+		
+		_endpostcondition : urn!Condition
+		(
+			deltaX <- -40,
+			deltaY <- -20,
+			label <- '',
+			expression <- 'true'
+		),
+		
+		_label : urn!NodeLabel,
+		
+		_contRef : urn!ComponentRef,
+		
+		_ucmmap : urn!UCMmap
+		(
+			name <- _switch.name,
+			contRefs <- Set{_contRef}
+		),
+		
+		_startpoint : urn!StartPoint
+		(
+		
+			name <- 'start',
+			precondition <- _startprecondition,
+			x <- thisModule._x + thisModule._deltax,
+			y <- thisModule._y,
+			label <- _label,
+			contRef <- _contRef,
+			diagram <- _ucmmap
+
+		),
+		
+		_endpoint : urn!EndPoint
+		(
+			name <- 'end',
+			postcondition <- _endpostcondition,
+			x <- thisModule._x + thisModule._deltax * 3,
+			y <- thisModule._y,
+			label <- _label,
+			contRef <- _contRef,
+			diagram <- _ucmmap
+		),
+		
+		_component : urn!Component
+		(
+			name <- _ucmmap.name,
+			contRefs <- Set{_contRef}
+			--collect all path nodes here
+		)
+}
+
+rule DoorSwitch {
+	from
+		_lock : hms!Lock
+	to	
+		_orfork1 : urn!OrFork
+	(
+		diagram <- thisModule.resolveTemp(_lock.switch, '_ucmmap')
+	),
+	
+		_orfork2 : urn!OrFork
+	(
+		diagram <- thisModule.resolveTemp(_lock.switch, '_ucmmap')
+	),
+	
+		_orfork3 : urn!OrFork
+	(
+		diagram <- thisModule.resolveTemp(_lock.switch, '_ucmmap')
+	),
+		
+		_orjoin1 : urn!OrJoin 
+	(
+		diagram <- thisModule.resolveTemp(_lock.switch, '_ucmmap')
+	),
+	
+		_orjoin2 : urn!OrJoin 
+	(
+		diagram <- thisModule.resolveTemp(_lock.switch, '_ucmmap')
+	),
+	
+	_resp_close : urn!Responsibility
+	(
+		name <- 'Close Door',
+		urndefinition <- thisModule.resolveTemp(_lock.holder.room.house, '_URNdefinition')
+	),
+	
+	_respRef_close1 : urn!RespRef 
+	(
+		diagram <- thisModule.resolveTemp(_lock.switch, '_ucmmap'),
+		hostDemand <- 'Close Door',
+		respDef <- _resp_close
+	),
+	
+	_respRef_close2 : urn!RespRef 
+	(
+		diagram <- thisModule.resolveTemp(_lock.switch, '_ucmmap'),
+		hostDemand <- 'Close Door',
+		respDef <- _resp_close
+	),
+	
+	_resp_lock : urn!Responsibility
+	(
+		name <- 'Lock Door',
+		urndefinition <- thisModule.resolveTemp(_lock.holder.room.house, '_URNdefinition')
+	),
+	
+	_respRef_lock : urn!RespRef 
+	(
+		diagram <- thisModule.resolveTemp(_lock.switch, '_ucmmap'),
+		hostDemand <- 'Lock Door',
+		respDef <- _resp_lock
+	),
+	
+	_resp_unlock : urn!Responsibility
+	(
+		name <- 'Unlock Door',
+		urndefinition <- thisModule.resolveTemp(_lock.holder.room.house, '_URNdefinition')
+	),
+	
+	
+	_respRef_unlock1 : urn!RespRef 
+	(
+		diagram <- thisModule.resolveTemp(_lock.switch, '_ucmmap'),
+		hostDemand <- 'Unlock Door',
+		respDef <- _resp_unlock
+	),
+	
+	_respRef_unlock2 : urn!RespRef 
+	(
+		diagram <- thisModule.resolveTemp(_lock.switch, '_ucmmap'),
+		hostDemand <- 'Unlock Door',
+		respDef <- _resp_unlock
+	),
+	
+	_connection1 : urn!NodeConnection
+	(
+		source <- thisModule.resolveTemp(_lock.switch, '_startpoint'),
+		target <- _orfork1,
+		diagram <- thisModule.resolveTemp(_lock.switch, '_ucmmap')
+	),
+	
+	_connection2 : urn!NodeConnection
+	(
+		source <- _orfork1,
+		target <- _respRef_unlock1,
+		diagram <- thisModule.resolveTemp(_lock.switch, '_ucmmap')
+	),
+	
+	
+	_connection3 : urn!NodeConnection
+	(
+		source <- _respRef_unlock1,
+		target <- thisModule.resolveTemp(_lock.switch, '_endpoint'),
+		diagram <- thisModule.resolveTemp(_lock.switch, '_ucmmap')
+	),
+	
+	_connection4 : urn!NodeConnection
+	(
+		source <- _orfork1,
+		target <- _orfork2,
+		diagram <- thisModule.resolveTemp(_lock.switch, '_ucmmap')
+	),
+	
+	_connection5 : urn!NodeConnection
+	(
+		source <- _orfork2,
+		target <- _orfork3,
+		diagram <- thisModule.resolveTemp(_lock.switch, '_ucmmap')
+	),
+	
+	_connection6 : urn!NodeConnection
+	(
+		source <- _orfork3,
+		target <- _respRef_unlock2,
+		diagram <- thisModule.resolveTemp(_lock.switch, '_ucmmap')
+	),
+	
+	_connection7 : urn!NodeConnection
+	(
+		source <- _respRef_unlock2,
+		target <- _respRef_close2,
+		diagram <- thisModule.resolveTemp(_lock.switch, '_ucmmap')
+	),
+	
+	_connection8 : urn!NodeConnection
+	(
+		source <- _respRef_close2,
+		target <- _orjoin1,
+		diagram <- thisModule.resolveTemp(_lock.switch, '_ucmmap')
+	),
+	
+	_connection9 : urn!NodeConnection
+	(
+		source <- _orjoin1,
+		target <- _orjoin2,
+		diagram <- thisModule.resolveTemp(_lock.switch, '_ucmmap')
+	),
+	
+	_connection10 : urn!NodeConnection
+	(
+		source <- _orjoin2,
+		target <- _respRef_lock,
+		diagram <- thisModule.resolveTemp(_lock.switch, '_ucmmap')
+	),
+	
+	_connection11 : urn!NodeConnection
+	(
+		source <- _orfork2,
+		target <- _orjoin2,
+		diagram <- thisModule.resolveTemp(_lock.switch, '_ucmmap')
+	),
+	
+	_connection12 : urn!NodeConnection
+	(
+		source <- _orfork3,
+		target <- _respRef_close1,
+		diagram <- thisModule.resolveTemp(_lock.switch, '_ucmmap')
+	),
+	
+	_connection13 : urn!NodeConnection
+	(
+		source <- _respRef_close1,
+		target <- _orjoin1,
+		diagram <- thisModule.resolveTemp(_lock.switch, '_ucmmap')
+	),
+	
+	
+	_connection14 : urn!NodeConnection
+	(
+		source <- _respRef_lock,
+		target <- thisModule.resolveTemp(_lock.switch, '_endpoint'),
+		diagram <- thisModule.resolveTemp(_lock.switch, '_ucmmap')
+	),
+		
+	
+	_conditionUNLOCKED : urn!Condition
+	(
+		label <- 'UNLOCKED',
+		nodeConnection <- _connection2 
+	)	
+	
+	
+}
+
+
+rule LightbulbSwitch {
+	from 
+		_lightbulb : hms!Lightbulb
+	to
+	_orfork : urn!OrFork
+	(
+		diagram <- thisModule.resolveTemp(_lightbulb.switch, '_ucmmap')
+	),
+	
+	_orjoin : urn!OrJoin 
+	(
+		diagram <- thisModule.resolveTemp(_lightbulb.switch, '_ucmmap')
+	),
+	
+	_resp_turnOn : urn!Responsibility
+	(
+		name <- 'Turn Light ON',
+		urndefinition <- thisModule.resolveTemp(_lightbulb.room.house, '_URNdefinition')
+	),
+	
+	_respRef_turnON : urn!RespRef 
+	(
+		diagram <- thisModule.resolveTemp(_lightbulb.switch, '_ucmmap'),
+		hostDemand <- 'Turn Light ON',
+		respDef <- _resp_turnOn
+	),
+	
+	_respRef_turnOFF : urn!RespRef 
+	(
+		diagram <- thisModule.resolveTemp(_lightbulb.switch, '_ucmmap'),
+		name <- 'Turn Light OFF'
+	),
+	
+	_connection1 : urn!NodeConnection
+	(
+		source <- thisModule.resolveTemp(_lightbulb.switch, '_startpoint'),
+		target <- _orfork,
+		diagram <- thisModule.resolveTemp(_lightbulb.switch, '_ucmmap')
+	),
+	
+	_connection2 : urn!NodeConnection
+	(
+		source <- _orfork,
+		target <- _respRef_turnON,
+		diagram <- thisModule.resolveTemp(_lightbulb.switch, '_ucmmap')
+	),
+	
+	_connection3 : urn!NodeConnection
+	(
+		source <- _respRef_turnON,
+		target <- _orjoin,
+		diagram <- thisModule.resolveTemp(_lightbulb.switch, '_ucmmap')
+	),
+	
+	_connection4 : urn!NodeConnection
+	(
+		source <- _orjoin,
+		target <- thisModule.resolveTemp(_lightbulb.switch, '_endpoint'),
+		diagram <- thisModule.resolveTemp(_lightbulb.switch, '_ucmmap')
+	),
+	
+	_connection5: urn!NodeConnection
+	(
+		source <- _orfork,
+		target <- _respRef_turnOFF,
+		diagram <- thisModule.resolveTemp(_lightbulb.switch, '_ucmmap')
+	),
+	
+	_connection6 : urn!NodeConnection
+	(
+		source <- _respRef_turnOFF,
+		target <- _orjoin,
+		diagram <- thisModule.resolveTemp(_lightbulb.switch, '_ucmmap')
+	),
+	
+	
+	_conditionON : urn!Condition
+	(
+		label <- 'ON',
+		nodeConnection <- _connection2
+	),
+	
+	_conditionOFF : urn!Condition
+	(
+		label <- 'OFF',
+		nodeConnection <- _connection5
 	)
+	
+	
 }
