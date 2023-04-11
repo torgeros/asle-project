@@ -197,9 +197,11 @@ rule DoorSwitch {
 	_respRef_close1 : urn!RespRef 
 	(
 		diagram <- thisModule.resolveTemp(_lock.switch, '_ucmmap'),
-		hostDemand <- 'Close Door',
-		respDef <- _resp_close
+		name <- _resp_close.name,
+		respDef <- _resp_close,
+		label <- _respRef_close1_label
 	),
+	_respRef_close1_label : urn!NodeLabel,
 	
 	_respRef_close2 : urn!RespRef 
 	(
