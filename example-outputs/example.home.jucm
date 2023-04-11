@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ucm.map="http:///ucm/map.ecore" xmlns:urn="http:///urn.ecore">
+  <urn:URNspec name="URNspec" created="April 11, 2023 at 12:38:44 AM EDT" modified="April 11, 2023 at 12:46:39 AM EDT" specVersion="6" urnVersion="1.27" nextGlobalID="75">
+    <ucmspec/>
+    <grlspec/>
+    <urndef>
+      <responsibilities name="Close Door" id="7" respRefs="38 39"/>
+      <responsibilities name="Lock Door" id="8" respRefs="40"/>
+      <responsibilities name="Unlock Door" id="9" respRefs="41 42"/>
+      <responsibilities name="Open FENESTRATION" id="10" respRefs="/3"/>
+      <responsibilities name="Close FENESTRATION" id="11" respRefs="/4"/>
+      <responsibilities name="Open FENESTRATION-1" id="12" respRefs="50"/>
+      <responsibilities name="Close FENESTRATION-1" id="13" respRefs="51"/>
+      <responsibilities name="Open FENESTRATION-2" id="14" respRefs="/13"/>
+      <responsibilities name="Close FENESTRATION-2" id="15" respRefs="/14"/>
+      <responsibilities name="Open FENESTRATION-3" id="16" respRefs="/23"/>
+      <responsibilities name="Close FENESTRATION-3" id="17" respRefs="/24"/>
+      <responsibilities name="Turn Light ON" id="18" respRefs="26"/>
+      <responsibilities name="Turn Light ON-1" id="19" respRefs="58"/>
+      <responsibilities name="Responsibility61" id="61" respRefs="27"/>
+      <responsibilities name="Responsibility62" id="62" respRefs="59"/>
+      <specDiagrams xsi:type="ucm.map:UCMmap" name="Light Switch" id="20">
+        <nodes xsi:type="ucm.map:StartPoint" name="start" id="22" x="150" y="250" contRef="21" succ="/0/@urndef/@specDiagrams.0/@connections.0">
+          <label/>
+          <precondition deltaX="40" deltaY="17" label="" expression="true"/>
+        </nodes>
+        <nodes xsi:type="ucm.map:EndPoint" name="end" id="23" x="1150" y="250" contRef="21" pred="/0/@urndef/@specDiagrams.0/@connections.3">
+          <label/>
+          <postcondition deltaX="-40" deltaY="-20" label="" expression="true"/>
+        </nodes>
+        <nodes xsi:type="ucm.map:OrFork" name="OrFork24" id="24" x="400" y="250" succ="/0/@urndef/@specDiagrams.0/@connections.1 /0/@urndef/@specDiagrams.0/@connections.4" pred="/0/@urndef/@specDiagrams.0/@connections.0"/>
+        <nodes xsi:type="ucm.map:OrJoin" name="OrJoin25" id="25" x="900" y="250" succ="/0/@urndef/@specDiagrams.0/@connections.3" pred="/0/@urndef/@specDiagrams.0/@connections.2 /0/@urndef/@specDiagrams.0/@connections.5"/>
+        <nodes xsi:type="ucm.map:RespRef" name="RespRef26" id="26" x="650" y="250" succ="/0/@urndef/@specDiagrams.0/@connections.2" pred="/0/@urndef/@specDiagrams.0/@connections.1" hostDemand="Turn Light ON" respDef="18"/>
+        <nodes xsi:type="ucm.map:RespRef" name="Turn Light OFF" id="27" x="650" y="150" succ="/0/@urndef/@specDiagrams.0/@connections.5" pred="/0/@urndef/@specDiagrams.0/@connections.4" respDef="61"/>
+        <contRefs xsi:type="ucm.map:ComponentRef" name="ComponentRef21" id="21" width="1250" height="300" contDef="3" nodes="22 23"/>
+        <connections xsi:type="ucm.map:NodeConnection" source="22" target="24"/>
+        <connections xsi:type="ucm.map:NodeConnection" source="24" target="26">
+          <condition label="switch: turn on"/>
+        </connections>
+        <connections xsi:type="ucm.map:NodeConnection" source="26" target="25"/>
+        <connections xsi:type="ucm.map:NodeConnection" source="25" target="23"/>
+        <connections xsi:type="ucm.map:NodeConnection" source="24" target="27">
+          <condition label="switch: turn off"/>
+        </connections>
+        <connections xsi:type="ucm.map:NodeConnection" source="27" target="25"/>
+      </specDiagrams>
+      <specDiagrams xsi:type="ucm.map:UCMmap" name="door (un-)locker" id="28">
+        <nodes xsi:type="ucm.map:StartPoint" name="start" id="30" x="64" y="429" contRef="29" succ="/0/@urndef/@specDiagrams.1/@connections.0">
+          <label/>
+          <precondition deltaX="40" deltaY="17" label="" expression="true"/>
+        </nodes>
+        <nodes xsi:type="ucm.map:EndPoint" name="end" id="31" x="1056" y="444" contRef="29" pred="/0/@urndef/@specDiagrams.1/@connections.15">
+          <label/>
+          <postcondition deltaX="-40" deltaY="-20" label="" expression="true"/>
+        </nodes>
+        <nodes xsi:type="ucm.map:OrFork" name="OrFork32" id="32" x="138" y="429" contRef="29" succ="/0/@urndef/@specDiagrams.1/@connections.1 /0/@urndef/@specDiagrams.1/@connections.3" pred="/0/@urndef/@specDiagrams.1/@connections.0"/>
+        <nodes xsi:type="ucm.map:OrFork" name="OrFork33" id="33" x="190" y="276" contRef="29" succ="/0/@urndef/@specDiagrams.1/@connections.4 /0/@urndef/@specDiagrams.1/@connections.10" pred="/0/@urndef/@specDiagrams.1/@connections.3"/>
+        <nodes xsi:type="ucm.map:OrFork" name="OrFork34" id="34" x="266" y="168" contRef="29" succ="/0/@urndef/@specDiagrams.1/@connections.5 /0/@urndef/@specDiagrams.1/@connections.12" pred="/0/@urndef/@specDiagrams.1/@connections.4"/>
+        <nodes xsi:type="ucm.map:OrJoin" name="OrJoin35" id="35" x="637" y="177" contRef="29" succ="/0/@urndef/@specDiagrams.1/@connections.8" pred="/0/@urndef/@specDiagrams.1/@connections.7 /0/@urndef/@specDiagrams.1/@connections.13"/>
+        <nodes xsi:type="ucm.map:OrJoin" name="OrJoin36" id="36" x="807" y="247" contRef="29" succ="/0/@urndef/@specDiagrams.1/@connections.9" pred="/0/@urndef/@specDiagrams.1/@connections.8 /0/@urndef/@specDiagrams.1/@connections.11"/>
+        <nodes xsi:type="ucm.map:OrJoin" name="OrJoin37" id="37" x="954" y="441" contRef="29" succ="/0/@urndef/@specDiagrams.1/@connections.15" pred="/0/@urndef/@specDiagrams.1/@connections.2 /0/@urndef/@specDiagrams.1/@connections.14"/>
+        <nodes xsi:type="ucm.map:RespRef" name="Close Door" id="38" x="427" y="169" contRef="29" succ="/0/@urndef/@specDiagrams.1/@connections.13" pred="/0/@urndef/@specDiagrams.1/@connections.12" respDef="7">
+          <label/>
+        </nodes>
+        <nodes xsi:type="ucm.map:RespRef" name="RespRef39" id="39" x="509" y="112" contRef="29" succ="/0/@urndef/@specDiagrams.1/@connections.7" pred="/0/@urndef/@specDiagrams.1/@connections.6" hostDemand="Close Door" respDef="7">
+          <label/>
+        </nodes>
+        <nodes xsi:type="ucm.map:RespRef" name="RespRef40" id="40" x="905" y="351" contRef="29" succ="/0/@urndef/@specDiagrams.1/@connections.14" pred="/0/@urndef/@specDiagrams.1/@connections.9" hostDemand="Lock Door" respDef="8">
+          <label deltaX="58" deltaY="-20"/>
+        </nodes>
+        <nodes xsi:type="ucm.map:RespRef" name="RespRef41" id="41" x="558" y="436" contRef="29" succ="/0/@urndef/@specDiagrams.1/@connections.2" pred="/0/@urndef/@specDiagrams.1/@connections.1" hostDemand="Unlock Door" respDef="9">
+          <label/>
+        </nodes>
+        <nodes xsi:type="ucm.map:RespRef" name="RespRef42" id="42" x="376" y="104" contRef="29" succ="/0/@urndef/@specDiagrams.1/@connections.6" pred="/0/@urndef/@specDiagrams.1/@connections.5" hostDemand="Unlock Door" respDef="9">
+          <label/>
+        </nodes>
+        <nodes xsi:type="ucm.map:EmptyPoint" name="EmptyPoint43" id="43" x="495" y="276" contRef="29" succ="/0/@urndef/@specDiagrams.1/@connections.11" pred="/0/@urndef/@specDiagrams.1/@connections.10"/>
+        <contRefs xsi:type="ucm.map:ComponentRef" name="ComponentRef29" id="29" width="2750" height="500" contDef="4" nodes="30 31 32 41 33 34 42 38 35 39 40 37 36 43"/>
+        <connections xsi:type="ucm.map:NodeConnection" source="30" target="32"/>
+        <connections xsi:type="ucm.map:NodeConnection" source="32" target="41">
+          <condition label="switch: unlock door"/>
+        </connections>
+        <connections xsi:type="ucm.map:NodeConnection" source="41" target="37"/>
+        <connections xsi:type="ucm.map:NodeConnection" source="32" target="33">
+          <condition label="switch: lock door"/>
+        </connections>
+        <connections xsi:type="ucm.map:NodeConnection" source="33" target="34">
+          <condition deltaX="94" deltaY="26" label="door is open"/>
+        </connections>
+        <connections xsi:type="ucm.map:NodeConnection" source="34" target="42">
+          <condition deltaX="96" deltaY="30" label="door is locked"/>
+        </connections>
+        <connections xsi:type="ucm.map:NodeConnection" source="42" target="39"/>
+        <connections xsi:type="ucm.map:NodeConnection" source="39" target="35"/>
+        <connections xsi:type="ucm.map:NodeConnection" source="35" target="36"/>
+        <connections xsi:type="ucm.map:NodeConnection" source="36" target="40"/>
+        <connections xsi:type="ucm.map:NodeConnection" source="33" target="43">
+          <condition deltaX="126" deltaY="32" label="door is closed"/>
+        </connections>
+        <connections xsi:type="ucm.map:NodeConnection" source="43" target="36"/>
+        <connections xsi:type="ucm.map:NodeConnection" source="34" target="38">
+          <condition deltaX="76" deltaY="-6" label="door is unlocked"/>
+        </connections>
+        <connections xsi:type="ucm.map:NodeConnection" source="38" target="35"/>
+        <connections xsi:type="ucm.map:NodeConnection" source="40" target="37"/>
+        <connections xsi:type="ucm.map:NodeConnection" source="37" target="31"/>
+      </specDiagrams>
+      <specDiagrams xsi:type="ucm.map:UCMmap" name="windowController" id="44">
+        <nodes xsi:type="ucm.map:StartPoint" name="start" id="46" x="150" y="250" contRef="45" succ="/0/@urndef/@specDiagrams.2/@connections.0">
+          <label/>
+          <precondition deltaX="40" deltaY="17" label="" expression="true"/>
+        </nodes>
+        <nodes xsi:type="ucm.map:EndPoint" name="end" id="47" x="1150" y="250" contRef="45" pred="/0/@urndef/@specDiagrams.2/@connections.3">
+          <label/>
+          <postcondition deltaX="-40" deltaY="-20" label="" expression="true"/>
+        </nodes>
+        <nodes xsi:type="ucm.map:OrFork" name="OrFork48" id="48" x="400" y="250" succ="/0/@urndef/@specDiagrams.2/@connections.1 /0/@urndef/@specDiagrams.2/@connections.4" pred="/0/@urndef/@specDiagrams.2/@connections.0"/>
+        <nodes xsi:type="ucm.map:OrJoin" name="OrJoin49" id="49" x="900" y="250" succ="/0/@urndef/@specDiagrams.2/@connections.3" pred="/0/@urndef/@specDiagrams.2/@connections.2 /0/@urndef/@specDiagrams.2/@connections.5"/>
+        <nodes xsi:type="ucm.map:RespRef" name="RespRef50" id="50" x="650" y="250" succ="/0/@urndef/@specDiagrams.2/@connections.2" pred="/0/@urndef/@specDiagrams.2/@connections.1" respDef="12"/>
+        <nodes xsi:type="ucm.map:RespRef" name="RespRef51" id="51" x="650" y="150" succ="/0/@urndef/@specDiagrams.2/@connections.5" pred="/0/@urndef/@specDiagrams.2/@connections.4" respDef="13"/>
+        <contRefs xsi:type="ucm.map:ComponentRef" name="ComponentRef45" id="45" width="1250" height="300" contDef="5" nodes="46 47"/>
+        <connections xsi:type="ucm.map:NodeConnection" source="46" target="48"/>
+        <connections xsi:type="ucm.map:NodeConnection" source="48" target="50">
+          <condition label="switch: open"/>
+        </connections>
+        <connections xsi:type="ucm.map:NodeConnection" source="50" target="49"/>
+        <connections xsi:type="ucm.map:NodeConnection" source="49" target="47"/>
+        <connections xsi:type="ucm.map:NodeConnection" source="48" target="51">
+          <condition label="switch: close"/>
+        </connections>
+        <connections xsi:type="ucm.map:NodeConnection" source="51" target="49"/>
+      </specDiagrams>
+      <specDiagrams xsi:type="ucm.map:UCMmap" name="Light Switch" id="52">
+        <nodes xsi:type="ucm.map:StartPoint" name="start" id="54" x="150" y="250" contRef="53" succ="/0/@urndef/@specDiagrams.3/@connections.0">
+          <label/>
+          <precondition deltaX="40" deltaY="17" label="" expression="true"/>
+        </nodes>
+        <nodes xsi:type="ucm.map:EndPoint" name="end" id="55" x="1150" y="250" contRef="53" pred="/0/@urndef/@specDiagrams.3/@connections.3">
+          <label/>
+          <postcondition deltaX="-40" deltaY="-20" label="" expression="true"/>
+        </nodes>
+        <nodes xsi:type="ucm.map:OrFork" name="OrFork56" id="56" x="400" y="250" succ="/0/@urndef/@specDiagrams.3/@connections.1 /0/@urndef/@specDiagrams.3/@connections.4" pred="/0/@urndef/@specDiagrams.3/@connections.0"/>
+        <nodes xsi:type="ucm.map:OrJoin" name="OrJoin57" id="57" x="900" y="250" succ="/0/@urndef/@specDiagrams.3/@connections.3" pred="/0/@urndef/@specDiagrams.3/@connections.2 /0/@urndef/@specDiagrams.3/@connections.5"/>
+        <nodes xsi:type="ucm.map:RespRef" name="RespRef58" id="58" x="650" y="250" succ="/0/@urndef/@specDiagrams.3/@connections.2" pred="/0/@urndef/@specDiagrams.3/@connections.1" hostDemand="Turn Light ON" respDef="19"/>
+        <nodes xsi:type="ucm.map:RespRef" name="Turn Light OFF" id="59" x="650" y="150" succ="/0/@urndef/@specDiagrams.3/@connections.5" pred="/0/@urndef/@specDiagrams.3/@connections.4" respDef="62"/>
+        <contRefs xsi:type="ucm.map:ComponentRef" name="ComponentRef53" id="53" width="1250" height="300" contDef="6" nodes="54 55"/>
+        <connections xsi:type="ucm.map:NodeConnection" source="54" target="56"/>
+        <connections xsi:type="ucm.map:NodeConnection" source="56" target="58">
+          <condition label="switch: turn on"/>
+        </connections>
+        <connections xsi:type="ucm.map:NodeConnection" source="58" target="57"/>
+        <connections xsi:type="ucm.map:NodeConnection" source="57" target="55"/>
+        <connections xsi:type="ucm.map:NodeConnection" source="56" target="59">
+          <condition label="switch: turn off"/>
+        </connections>
+        <connections xsi:type="ucm.map:NodeConnection" source="59" target="57"/>
+      </specDiagrams>
+      <components name="Light Switch" id="3" contRefs="21"/>
+      <components name="door (un-)locker" id="4" contRefs="29"/>
+      <components name="windowController" id="5" contRefs="45"/>
+      <components name="Light Switch-1" id="6" contRefs="53"/>
+    </urndef>
+    <metadata name="_Use0to100EvaluationRange" value="false"/>
+  </urn:URNspec>
+  <ucm.map:OrFork succ="/6 /9" pred="/5"/>
+  <ucm.map:OrJoin succ="/8" pred="/7 /10"/>
+  <ucm.map:RespRef succ="/7" pred="/6" respDef="10"/>
+  <ucm.map:RespRef succ="/10" pred="/9" respDef="11"/>
+  <ucm.map:NodeConnection target="/1"/>
+  <ucm.map:NodeConnection source="/1" target="/3">
+    <condition label="switch: open"/>
+  </ucm.map:NodeConnection>
+  <ucm.map:NodeConnection source="/3" target="/2"/>
+  <ucm.map:NodeConnection source="/2"/>
+  <ucm.map:NodeConnection source="/1" target="/4">
+    <condition label="switch: close"/>
+  </ucm.map:NodeConnection>
+  <ucm.map:NodeConnection source="/4" target="/2"/>
+  <ucm.map:OrFork succ="/16 /19" pred="/15"/>
+  <ucm.map:OrJoin succ="/18" pred="/17 /20"/>
+  <ucm.map:RespRef succ="/17" pred="/16" respDef="14"/>
+  <ucm.map:RespRef succ="/20" pred="/19" respDef="15"/>
+  <ucm.map:NodeConnection target="/11"/>
+  <ucm.map:NodeConnection source="/11" target="/13">
+    <condition label="switch: open"/>
+  </ucm.map:NodeConnection>
+  <ucm.map:NodeConnection source="/13" target="/12"/>
+  <ucm.map:NodeConnection source="/12"/>
+  <ucm.map:NodeConnection source="/11" target="/14">
+    <condition label="switch: close"/>
+  </ucm.map:NodeConnection>
+  <ucm.map:NodeConnection source="/14" target="/12"/>
+  <ucm.map:OrFork succ="/26 /29" pred="/25"/>
+  <ucm.map:OrJoin succ="/28" pred="/27 /30"/>
+  <ucm.map:RespRef succ="/27" pred="/26" respDef="16"/>
+  <ucm.map:RespRef succ="/30" pred="/29" respDef="17"/>
+  <ucm.map:NodeConnection target="/21"/>
+  <ucm.map:NodeConnection source="/21" target="/23">
+    <condition label="switch: open"/>
+  </ucm.map:NodeConnection>
+  <ucm.map:NodeConnection source="/23" target="/22"/>
+  <ucm.map:NodeConnection source="/22"/>
+  <ucm.map:NodeConnection source="/21" target="/24">
+    <condition label="switch: close"/>
+  </ucm.map:NodeConnection>
+  <ucm.map:NodeConnection source="/24" target="/22"/>
+</xmi:XMI>
