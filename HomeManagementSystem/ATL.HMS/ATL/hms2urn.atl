@@ -131,6 +131,12 @@ rule DoorSwitch {
 		diagram <- thisModule.resolveTemp(_lock.switch, '_ucmmap')
 	),
 	
+		_orjoin3 : urn!OrJoin 
+	(
+		diagram <- thisModule.resolveTemp(_lock.switch, '_ucmmap')
+	),
+	
+	
 	_resp_close : urn!Responsibility
 	(
 		name <- 'Close Door',
@@ -203,7 +209,7 @@ rule DoorSwitch {
 	_connection3 : urn!NodeConnection
 	(
 		source <- _respRef_unlock1,
-		target <- thisModule.resolveTemp(_lock.switch, '_endpoint'),
+		target <- _orjoin3,
 		diagram <- thisModule.resolveTemp(_lock.switch, '_ucmmap')
 	),
 	
@@ -281,16 +287,54 @@ rule DoorSwitch {
 	_connection14 : urn!NodeConnection
 	(
 		source <- _respRef_lock,
+		target <- _orjoin3,
+		diagram <- thisModule.resolveTemp(_lock.switch, '_ucmmap')
+	),
+	
+	_connection15 : urn!NodeConnection
+	(
+		source <- _orjoin3,
 		target <- thisModule.resolveTemp(_lock.switch, '_endpoint'),
 		diagram <- thisModule.resolveTemp(_lock.switch, '_ucmmap')
 	),
+	
 		
 	
 	_conditionUNLOCKED : urn!Condition
 	(
 		label <- 'UNLOCKED',
 		nodeConnection <- _connection2 
-	)	
+	),
+	
+	_conditionLOCKED : urn!Condition
+	(
+		label <- 'LOCKED',
+		nodeConnection <- _connection4 
+	),
+	
+	_conditionLOCKED1 : urn!Condition
+	(
+		label <- 'LOCKED',
+		nodeConnection <- _connection6 
+	),
+	
+	_conditionUNLOCKED1 : urn!Condition
+	(
+		label <- 'UNLOCKED',
+		nodeConnection <- _connection12
+	),
+	
+	
+	_conditionCLOSED : urn!Condition
+	(
+		label <- 'CLOSED',
+		nodeConnection <- _connection11 
+	),
+	_conditionOPEN : urn!Condition
+	(
+		label <- 'OPEN',
+		nodeConnection <- _connection5 
+	)
 	
 	
 }
