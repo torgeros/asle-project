@@ -570,8 +570,8 @@ helper def: StartPointCollection: Bag(urn!StartPoint) = Bag{};
 
 -- helper: to figure out which arm of an or-split is longer
 helper context urn!OrFork def: orForkAt1IsLonger(): Boolean =
-	let node1: hms!BooleanExpression = self.succ.at(1).target in
-	let node2: hms!BooleanExpression = self.succ.at(2).target in
+	let node1: urn!PathNode = self.succ.at(1).target in
+	let node2: urn!PathNode = self.succ.at(2).target in
 	node1.nodesUntilOrJoin(0) >= node2.nodesUntilOrJoin(0);
 
 -- helper helper: measure length of nodes in an OR-arm, call with orJoinsUntilStop=0 on at(1) and at(2) and compare. undefined behaviour when there is no or join coming.
