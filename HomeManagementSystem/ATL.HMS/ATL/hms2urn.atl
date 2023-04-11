@@ -62,13 +62,13 @@ rule place (node: urn!PathNode, x: Integer, y: Integer, orJoinsUntilStop: Intege
 			-- if isOrFork: place bottom, measure height of bottom arm (with included forks), place top arm above everything
 			-- longer arm is placed at bottom to be able to set the OrJoin directly at it's x+INCR/y coords.
 			if (node.orForkAt1IsLonger()) {
-				thisModule.place(node.succ.at(1).target, nextX, y, orJoinsUntilStop + 1);
 				let yIncrement: Integer = node.succ.at(1).target.heightOfSubdiagram(0) * thisModule.COORD_Y_INCR in
 				thisModule.place(node.succ.at(2).target, nextX, y + yIncrement, orJoinsUntilStop);
+				thisModule.place(node.succ.at(1).target, nextX, y, orJoinsUntilStop + 1);
 			} else {
-				thisModule.place(node.succ.at(2).target, nextX, y, orJoinsUntilStop + 1);
 				let yIncrement: Integer = node.succ.at(2).target.heightOfSubdiagram(0) * thisModule.COORD_Y_INCR in
 				thisModule.place(node.succ.at(1).target, nextX, y + yIncrement, orJoinsUntilStop);
+				thisModule.place(node.succ.at(2).target, nextX, y, orJoinsUntilStop + 1);
 			}
 		} else if (node.oclIsKindOf(urn!EndPoint)) {
 			-- endpoint as recursion return condition
@@ -318,6 +318,16 @@ rule DoorSwitch {
 	_connection11 : urn!NodeConnection
 	(
 		source <- _orfork2,
+		target <- _connection11_internode,
+		diagram <- thisModule.resolveTemp(_lock.switch, '_ucmmap')
+	),
+	_connection11_internode : urn!EmptyPoint
+	(
+		diagram <- thisModule.resolveTemp(_lock.switch, '_ucmmap')
+	),
+	_connection11_2 : urn!NodeConnection
+	(
+		source <- _connection11_internode,
 		target <- _orjoin2,
 		diagram <- thisModule.resolveTemp(_lock.switch, '_ucmmap')
 	),
