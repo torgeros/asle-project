@@ -8,6 +8,7 @@
       </fenestration>
       <switches name="Light Switch" target="//@house/@rooms.0/@lightbulbs.0"/>
       <switches name="door (un-)locker" target="//@house/@rooms.0/@fenestration.0/@lock"/>
+      <switches name="bathroom light" target="//@house/@rooms.2/@lightbulbs.0"/>
     </rooms>
     <rooms name="bedroom">
       <lightbulbs switch="//@house/@rooms.1/@switches.1" name="Ceiling Light"/>
@@ -16,6 +17,9 @@
       <fenestration xsi:type="hms:Door" name="Bedroom Door" otherRoom="//@house/@rooms.0"/>
       <switches name="windowController" target="//@house/@rooms.1/@fenestration.0"/>
       <switches name="Light Switch" target="//@house/@rooms.1/@lightbulbs.0"/>
+    </rooms>
+    <rooms name="bathroom">
+      <lightbulbs switch="//@house/@rooms.0/@switches.2" name="light"/>
     </rooms>
   </house>
 </hms:HMS>
